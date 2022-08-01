@@ -1,0 +1,54 @@
+@import './base/null.scss';
+//! <Подключение шрифтов>
+// &display=swap
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular,500,600,700&display=swap');
+@import './base/fonts.scss';
+//! </Подключение шрифтов>
+
+//! <Иконочные шрифты>
+//! </Иконочные шрифты>
+
+//! <Переменные>
+@import './base/variables.scss';
+//! </Переменные>
+
+//! <Обнуление, сетка, параметры>
+body {
+    color: #000;
+    font-size: 14px;
+    font-family: $fontFamily;
+    &._lock{
+        overflow: hidden;
+    }
+}
+//! </Обнуление, сетка, параметры>
+
+//! <Основная сетка>
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._container {
+    max-width: $maxWidthContainer;
+    margin: 0 auto;
+    @media (max-width: $md1) {
+    }
+    @media (max-width: $md2) {
+    }
+    @media (max-width: $md3) {
+    }
+}
+.page{
+    flex: 1 1 auto;
+}
+//! </Основная сетка>
+
+//! <Подключение блоков>
+@import './base/ui.scss';
+@import './blocks/header.scss';
+@import './blocks/footer.scss';
+//! </Подключение блоков>
