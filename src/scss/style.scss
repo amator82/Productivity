@@ -33,6 +33,7 @@ body {
     flex-direction: column;
 }
 ._container {
+    padding: 0 10px;
     max-width: $maxWidthContainer;
     margin: 0 auto;
     @media (max-width: $md1) {

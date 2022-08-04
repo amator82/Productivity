@@ -1,0 +1,175 @@
+.header {
+    padding: 10px 0;
+    &__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &__content {
+        padding: 0 10px 0px 0px;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        @media (max-width: $md3) {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+    }
+    &__logo {
+        position: relative;
+        z-index: 2;
+        @media (max-width: $md3) {
+            left: 30%;
+            right: 30%;
+        }
+        @media (max-width: $md4) {
+            left: 50%;
+            right: 50%;
+        }
+    }
+    &__menu {
+    }
+    &__contacts {
+    }
+}
+.menu {
+    z-index: 500;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+    margin: 0px 0px 0px 70px;
+    @media (max-width: $md2) {
+        margin: 0px 0px 0px 50px;
+    }
+    @media (max-width: $md3) {
+        margin: 0px 0px 0px 0px;
+        flex: 0 0 auto;
+    }
+    &__icon {
+    }
+    &__body {
+        @media (max-width: $md3) {
+            transform: translate(0px, -100%);
+            transition: transform 0.5s ease 0s;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: auto;
+            padding: 70px 10px 30px 10px;
+            background-color: rgba(255, 255, 255, 0.95);
+            &._active {
+                transform: translate(0px, -0%);
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        li {
+            &:not(:last-child) {
+                margin: 0px 40px 0px 0px;
+            }
+        }
+        @media (max-width: $md3) {
+            flex-direction: column;
+            align-items: center;
+            li {
+                &:not(:last-child) {
+                    margin: 0px 0px 40px 0px;
+                }
+            }
+        }
+    }
+    &__link {
+        color: $grey;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: calc(15 / 12 * 110%);
+        letter-spacing: 0.05em;
+        text-shadow: 0px 0px 5px #e6e6e6;
+        @media (min-width: $md3) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &._active {
+            color: $blue;
+        }
+        @media (max-width: $md3) {
+            font-size: 22px;
+        }
+    }
+}
+.icon-menu {
+    @media (max-width: $md3) {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 5;
+        span,
+        &::before,
+        &::after {
+            content: '';
+            transition: all 0.3s ease 0s;
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $darkblue;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        span {
+            top: calc(50% - 1px);
+        }
+        &._active {
+            span {
+                width: 0;
+            }
+            &::before,
+            &::after {
+            }
+            &::before {
+                top: calc(50% - 1px);
+                transform: rotate(-45deg);
+            }
+            &::after {
+                bottom: calc(50% - 1px);
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+.contacts-header {
+    width: auto;
+    &__column {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__links {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 35px;
+        margin: 0px 45px 0px 0px;
+        @media (max-width: $md2) {
+            margin: 0px 35px 0px 0px;
+        }
+        @media (max-width: $md4) {
+            display: none;
+            visibility: hidden;
+        }
+        &__link {
+        }
+        &__button {
+        }
+    }
+}
