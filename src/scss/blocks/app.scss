@@ -12,6 +12,7 @@
     }
     &__body {
         display: flex;
+        justify-content: space-between;
     }
     &__content {
         max-width: 410px;
