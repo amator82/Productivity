@@ -1,5 +1,11 @@
 .about {
     padding: 140px 0px 170px 0px;
+    @media (max-width: $md3) {
+        padding: 70px 0;
+    }
+    @media (max-width: $md4) {
+        padding: 40px 0;
+    }
     &__container {
         align-items: center;
         justify-content: center;
@@ -14,13 +20,30 @@
         font-size: 24px;
         line-height: calc(30 / 24 * 100%);
         color: $darkblue;
+        @media (max-width: $md3) {
+            margin: 0px 0px 50px 0px;
+        }
+        @media (max-width: $md4) {
+            margin: 0px 0px 40px 0px;
+        }
     }
     &__columns {
         text-align: center;
         justify-content: center;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
         margin: 0px 0px 90px 0px;
         column-gap: 70px;
+        @media (max-width: $md3) {
+            margin: 0px 0px 70px 0px;
+            column-gap: 40px;
+        }
+        @media (max-width: $md4) {
+            margin: 0px 0px 50px 0px;
+            grid-template-columns: repeat(2, auto);
+            column-gap: 60px;
+            row-gap: 40px;
+        }
     }
     &__column {
     }
@@ -42,6 +65,9 @@
         img {
             margin: auto;
         }
+        @media (max-width:$md3){
+            margin: 0px 0px 20px 0px;
+        }
     }
     &__title {
         font-weight: 700;
@@ -49,6 +75,9 @@
         color: #4074f8;
         line-height: 1.5;
         margin: 0px 0px 30px 0px;
+        @media (max-width:$md3){
+            margin: 0px 0px 20px 0px;
+        }
     }
     &__text {
         font-family: $fontFamily;
@@ -70,6 +99,9 @@
         color: #adb3cb;
         span {
             margin: 0px 17px 0px 17px;
+            @media (max-width:$md4){
+                margin: 0px 10px;
+            }
         }
         margin: 0px 17px 0px 17px;
     }

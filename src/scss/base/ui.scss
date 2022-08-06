@@ -24,17 +24,30 @@
         color: #3a79ff;
         @media (min-width: $md3) {
             &:hover {
-                background-color: #becce8;
+                background-color: #dce5f9;
             }
         }
     }
     &__grey {
         color: #adb4d2;
         border: 1px solid #d1d1e4;
+        @media (min-width: $md3) {
+            &:hover {
+                color: #fff;
+                background-color: #aeb3cb;
+                border: 1px solid #aeb3cb;
+            }
+        }
     }
-    &__pink{
-        color: #D43F3F;
-        background-color: #FFD7D7;
+    &__pink {
+        color: #d43f3f;
+        background-color: #ffd7d7;
+        @media (min-width: $md3) {
+            &:hover {
+                color: #e33838;
+                background-color: #fbc9c9;
+            }
+        }
     }
 }
 .info {

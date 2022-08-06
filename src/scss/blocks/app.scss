@@ -19,7 +19,7 @@
         @media (max-width: $md3) {
             max-width: 330px;
         }
-        @media (max-width: 610px ) {
+        @media (max-width: 610px) {
             max-width: 270px;
         }
     }
@@ -124,16 +124,23 @@
     display: flex;
 }
 .button-blue {
+    transition: all 0.3s ease 0s;
     justify-content: center;
     padding: 13px 15px;
     flex: 0 0 130px;
     border: 1px solid #4c85ff;
     border-radius: 2px 0px 0px 2px;
     display: flex;
-    background: #4c85ff;
+    background-color: #4c85ff;
     box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
     @media (max-width: $md4) {
         flex: 0 0 100px;
+    }
+    @media (min-width: $md3) {
+        &:hover {
+            background-color: #6694f6;
+            border: 1px solid #6694f6;
+        }
     }
     &__text {
         font-weight: 700;
