@@ -1,7 +1,15 @@
 .blog {
     background-color: $bgc;
     padding-top: 100px;
-    padding-bottom: 210px;
+    padding-bottom: 100px;
+    @media (max-width: $md3) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @media (max-width: $md4) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
     &__container {
     }
     &__info {
@@ -18,6 +26,7 @@
     &__swiper {
     }
 }
+
 .swiper {
 }
 .swiper-container {
@@ -51,26 +60,127 @@
         'A B'
         'A C';
     &__desk {
-        width: 267px;
-        height: 267px;
+        margin: auto;
+        grid-template-columns: (1fr, 1fr);
         grid-area: A;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
         border-radius: 5px;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparent;
+            background-image: linear-gradient(
+                13.46deg,
+                rgba(255, 199, 53, 0.44) 1.89%,
+                rgba(255, 227, 154, 0.93) 1.9%,
+                rgba(255, 159, 90, 0) 68.24%
+            );
+        }
+        &:hover {
+            img {
+                transition: transform 0.3s ease 0s;
+                transform: scale(1.1);
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__loupe {
+        transition: all 0.3s ease 0s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        padding: 24px;
+        top: 40%;
+        left: 40%;
+        border-radius: 50%;
+        background-color: #fff;
+        img {
+            width: 17px;
+            height: 17px;
+        }
     }
     &__picnic {
-        width: 127px;
-        height: 127px;
+        position: relative;
+        width: 100%;
+        height: 100%;
         grid-area: B;
         background: linear-gradient(
             rgba(255, 53, 53, 0.48) 14.02%,
             rgba(255, 179, 90, 0) 68%
         );
+        overflow: hidden;
         border-radius: 5px;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparent;
+            background-image: linear-gradient(
+                27.48deg,
+                rgba(255, 53, 53, 0.48) 14.02%,
+                rgba(255, 179, 90, 0) 68%
+            );
+        }
+        &:hover {
+            img {
+                transition: all 0.3s ease 0s;
+                transform: scale(1.1);
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
     &__callboard {
-        border-radius: 5px;
-        width: 127px;
-        height: 127px;
+        transition: all 0.3s ease 0s;
+        position: relative;
+        overflow: hidden;
         grid-area: C;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: transparent;
+            background-image: linear-gradient(
+                13.49deg,
+                rgba(53, 170, 255, 0.68) 11.59%,
+                rgba(90, 136, 255, 0) 96.88%
+            );
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover {
+            img {
+                transition: all 0.3s ease 0s;
+                transform: scale(1.1);
+            }
+        }
     }
 }
 .content-blog {
