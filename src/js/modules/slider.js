@@ -1,4 +1,7 @@
-new Swiper('.main__swiper', {
+const mainSlider = document.querySelector('.main__swiper')
+const secondSlider = document.querySelector('.blog__swiper')
+
+let planSlider = new Swiper(mainSlider, {
     pagination: {
         el: '.main__swiper-pagination',
         type: 'bullets',
@@ -31,4 +34,17 @@ new Swiper('.main__swiper', {
             grabCursor: true
         }
     }
+})
+
+let blogSlider = new Swiper(secondSlider, {
+    navigation: {
+        nextEl: '.blog-button__next',
+        prevEl: '.blog-button__prev'
+    },
+    pagination: {
+        el: '.blog-swiper__pagination',
+        type: 'bullets',
+        clickable: true
+    },
+    slidesPerView:1
 })
