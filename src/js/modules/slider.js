@@ -1,16 +1,15 @@
-const mainSlider = document.querySelector('.main__swiper')
-const secondSlider = document.querySelector('.blog__swiper')
+const mainSwiper = document.querySelector('.main__swiper')
+const blogSwiper = document.querySelector('.blog__swiper')
+const testimonialSwiper = document.querySelector('.testimonials__swiper')
 
-let planSlider = new Swiper(mainSlider, {
+let planSlider = new Swiper(mainSwiper, {
     pagination: {
         el: '.main__swiper-pagination',
         type: 'bullets',
         clickable: true
     },
     loop: true,
-    simulateTouch: true,
     touchRatio: 1.5,
-    slideToClickedSlide: true,
     autoplay: {
         delay: 5000
     },
@@ -33,7 +32,7 @@ let planSlider = new Swiper(mainSlider, {
     }
 })
 
-let blogSlider = new Swiper(secondSlider, {
+let blogSlider = new Swiper(blogSwiper, {
     navigation: {
         nextEl: '.blog-button__next',
         prevEl: '.blog-button__prev'
@@ -43,7 +42,28 @@ let blogSlider = new Swiper(secondSlider, {
         type: 'bullets',
         clickable: true
     },
-    slidesPerView:1,
+    slidesPerView: 1,
     spaceBetween: 10,
-    autoHeight: true
+    // autoHeight: true,
+    touchRatio: 1.5,
+    // autoplay: {
+    //     delay: 8000
+    // },
+    keyboard: {
+        //? Включить/выключить
+        enabled: true,
+        //? Включить/выключить только когда слайдер в пределах вьювпорта
+        onlyInviewport: true,
+        //? Включить/выключить управление клавишами PageUp, PageDown
+        pageUpDown: true
+    }
+})
+
+let testimonialSlider = new Swiper(testimonialSwiper, {
+    pagination: {
+        el: '.testimonials-swiper__pagination',
+        type: 'bullets',
+        clickable: true
+    },
+    spaceBetween: 70
 })
