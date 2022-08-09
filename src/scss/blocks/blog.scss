@@ -1,10 +1,10 @@
 .blog {
     background-color: $bgc;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     @media (max-width: $md3) {
         padding-top: 70px;
-        padding-bottom: 70px;
+        padding-bottom: 120px;
     }
     @media (max-width: $md4) {
         padding-top: 40px;
@@ -24,7 +24,6 @@
         margin: 0px 0px 90px 0px;
     }
     &__swiper {
-        padding-bottom: 110px;
     }
 }
 .swiper-blog {
@@ -40,12 +39,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: $md3) {
+            gap: 30px;
+        }
     }
     &__pictures {
     }
     &__content {
         max-width: 410px;
         padding: 0 0 0 10px;
+        @media (max-width: $md3) {
+            max-width: 320px;
+        }
     }
 }
 .blog-pictures {
@@ -81,13 +86,13 @@
         }
         &:hover {
             img {
-                transition: transform 0.3s ease 0s;
+                transition: all 0.5s ease 0s;
                 transform: scale(1.1);
             }
         }
         img {
-            width: 100%;
-            height: 100%;
+            width: 267px;
+            height: 267px;
         }
     }
     &__loupe {
@@ -141,8 +146,8 @@
             }
         }
         img {
-            width: 100%;
-            height: 100%;
+            width: 126px;
+            height: 126px;
         }
     }
     &__callboard {
@@ -168,8 +173,8 @@
             );
         }
         img {
-            width: 100%;
-            height: 100%;
+            width: 126px;
+            height: 126px;
         }
         &:hover {
             img {
@@ -185,10 +190,20 @@
         font-size: 36px;
         line-height: calc(45 / 36 * 100%);
         margin: 0px 0px 30px 0px;
+        @media (max-width: $md3) {
+            font-size: 34px;
+            margin: 0px 0px 20px 0px;
+        }
     }
     &__text {
         line-height: calc(25 / 15 * 100%);
         margin: 0px 0px 30px 0px;
+        @media (max-width: $md3) {
+            margin: 0px 0px 15px 0px;
+        }
+        p{
+            margin-bottom: 15px;
+        }
     }
     &__links {
     }
@@ -200,6 +215,9 @@
         font-size: 13px;
         line-height: calc(16 / 16 * 100%);
         color: #a6b6da;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 .btn {
@@ -207,16 +225,13 @@
     &__blue {
     }
 }
-
 .swiper {
+    overflow: visible;
 }
-.swiper-wrapper {
-}
-.swiper-container {
-}
-.blog-swiper {
-    &__pagination {
-        bottom: 0;
+.blog-swiper__pagination.swiper-pagination {
+    bottom: -100;
+    @media (max-width: $md3) {
+        bottom: -50px;
     }
 }
 .swiper-pagination {
@@ -227,17 +242,19 @@
             content: '';
         }
         color: #a8b4e5;
+        padding: 0px 20px 0px 0px;
     }
     &__next {
         &::after {
             content: '';
         }
         color: #a8b4e5;
+        padding: 0px 0px 0px 20px;
     }
 }
-.blog-swiper__pagination .swiper-pagination-bullet {
+.blog-swiper__pagination.swiper-pagination-bullet {
     background-color: #adb0b6;
 }
-.blog-swiper__pagination .swiper-pagination-bullet-active {
+.blog-swiper__pagination.swiper-pagination-bullet-active {
     background-color: #5283ff;
 }

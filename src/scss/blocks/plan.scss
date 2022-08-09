@@ -13,7 +13,6 @@
     text-align: center;
     &__content {
         padding: 90px 0px 210px 0px;
-        height: 100%;
         position: relative;
         z-index: 2;
         @media (max-width: $md3) {
@@ -24,7 +23,6 @@
         }
     }
     &__container {
-        height: 100%;
     }
     &__info {
         &:not(:last-child) {

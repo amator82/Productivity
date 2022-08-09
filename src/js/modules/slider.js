@@ -8,7 +8,6 @@ let planSlider = new Swiper(mainSlider, {
         clickable: true
     },
     loop: true,
-    autoHeight: true,
     simulateTouch: true,
     touchRatio: 1.5,
     slideToClickedSlide: true,
@@ -25,11 +24,9 @@ let planSlider = new Swiper(mainSlider, {
     },
     breakpoints: {
         320: {
-            slidesPerView: 1.05,
             spaceBetween: 10
         },
         768: {
-            slidesPerView: 1,
             spaceBetween: 0,
             grabCursor: true
         }
@@ -46,5 +43,7 @@ let blogSlider = new Swiper(secondSlider, {
         type: 'bullets',
         clickable: true
     },
-    slidesPerView:1
+    slidesPerView:1,
+    spaceBetween: 10,
+    autoHeight: true
 })
