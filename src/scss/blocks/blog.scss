@@ -201,7 +201,6 @@
         @media (max-width: $md3) {
             margin: 0px 0px 15px 0px;
         }
-
         p {
             &:not(:last-child) {
                 margin-bottom: 15px;
@@ -228,7 +227,7 @@
     &__blue {
     }
 }
-.swiper {
+.blog__swiper.swiper {
     overflow: visible;
 }
 .blog-swiper__pagination.swiper-pagination {
@@ -236,8 +235,6 @@
     @media (max-width: $md3) {
         bottom: -50px;
     }
-}
-.swiper-pagination {
 }
 .blog-button {
     &__prev {

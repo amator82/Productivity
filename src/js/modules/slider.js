@@ -50,11 +50,8 @@ let blogSlider = new Swiper(blogSwiper, {
     //     delay: 8000
     // },
     keyboard: {
-        //? Включить/выключить
         enabled: true,
-        //? Включить/выключить только когда слайдер в пределах вьювпорта
         onlyInviewport: true,
-        //? Включить/выключить управление клавишами PageUp, PageDown
         pageUpDown: true
     }
 })
@@ -65,5 +62,11 @@ let testimonialSlider = new Swiper(testimonialSwiper, {
         type: 'bullets',
         clickable: true
     },
-    spaceBetween: 70
+    slidesPerView: 1,
+    spaceBetween: 70,
+    keyboard: {
+        enabled: true,
+        onlyInviewport: true,
+        pageUpDown: true
+    }
 })
