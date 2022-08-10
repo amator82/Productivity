@@ -76,6 +76,11 @@
         color: #676f95;
         line-height: calc(24 / 14 * 100%);
         letter-spacing: 0.03em;
+        p {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
     }
     &__avatar {
         position: absolute;

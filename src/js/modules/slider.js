@@ -44,16 +44,8 @@ let blogSlider = new Swiper(blogSwiper, {
     },
     slidesPerView: 1,
     spaceBetween: 10,
-    // autoHeight: true,
-    touchRatio: 1.5,
-    // autoplay: {
-    //     delay: 8000
-    // },
-    keyboard: {
-        enabled: true,
-        onlyInviewport: true,
-        pageUpDown: true
-    }
+    autoHeight: true,
+    touchRatio: 1.5
 })
 
 let testimonialSlider = new Swiper(testimonialSwiper, {
@@ -62,8 +54,12 @@ let testimonialSlider = new Swiper(testimonialSwiper, {
         type: 'bullets',
         clickable: true
     },
+    touchRatio: 1.5,
     slidesPerView: 1,
     spaceBetween: 70,
+    autoHeight: true,
+    grabCursor: true,
+    slideToClickedSlide: true,
     keyboard: {
         enabled: true,
         onlyInviewport: true,
