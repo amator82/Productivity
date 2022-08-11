@@ -1,7 +1,9 @@
 .getstarted {
     padding: 90px 0;
     position: relative;
-    
+    @media (max-width: $md3) {
+        padding: 60px 0;
+    }
     &::after {
         content: '';
         position: absolute;
@@ -21,7 +23,19 @@
         position: relative;
         z-index: 10;
         margin: 0px 0px 55px 0px;
+        @media (max-width:$md3){
+              margin: 0px 0px 40px 0px;
+        }
     }
+    &__buttons {
+        display: inline-flex;
+        position: relative;
+        z-index: 20;
+    }
+    &__background {
+    }
+}
+.content-getstarted {
     &__info {
         color: #fff;
         margin: 0px 0px 15px 0px;
@@ -47,11 +61,6 @@
             }
         }
     }
-    &__buttons {
-        display: inline-flex;
-        position: relative;
-        z-index: 20;
-    }
 }
 .button-getstarted {
     &__view {
@@ -63,7 +72,7 @@
         padding: 13px 17px;
         border: 1px solid #fff;
         border-radius: 2px 0px 0px 2px;
-        overflow: hidden
+        overflow: hidden;
     }
     &__read {
         @extend .button-getstarted__view;
@@ -73,5 +82,37 @@
         background-color: transparent;
         border: 1px solid #a0b4ff;
         border-radius: 0px 2px 2px 0px;
+    }
+}
+.backround-clouds {
+    &__01 {
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 5;
+        @media (max-width: $md3) {
+            left: -120px;
+        }
+    }
+    &__02 {
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        left: 0;
+        @media (max-width: $md3) {
+            left: -100px;
+        }
+    }
+    &__03 {
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        right: 0;
+        @media (max-width: $md2) {
+            right: -200px;
+        }
+        @media (max-width: $md3) {
+            right: -350px;
+        }
     }
 }
