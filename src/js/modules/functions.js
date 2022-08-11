@@ -26,3 +26,20 @@ export function menuInit() {
     }
 }
 //!</Menu Burger>
+export function dropDown() {
+    const dropDownPreview = document.querySelectorAll('.menu-dropdown__preview')
+    const dropDownContent = document.querySelectorAll('.menu-dropdown__content')
+    const dropDownArrow = document.querySelectorAll('.menu-dropdown__arrow')
+    const dropDownTitle = document.querySelectorAll('.menu-dropdown__title')
+
+    if (dropDownPreview) {
+        dropDownPreview.forEach((item, i) => {
+            item.addEventListener('click', function (e) {
+                dropDownPreview[i].classList.toggle('_open')
+                dropDownContent[i].classList.toggle('_active')
+                dropDownArrow[i].classList.toggle('_active')
+                dropDownTitle[i].classList.toggle('_active')
+            })
+        })
+    }
+}
