@@ -57,7 +57,6 @@ let testimonialSlider = new Swiper(testimonialSwiper, {
     touchRatio: 1.5,
     slidesPerView: 1,
     spaceBetween: 70,
-    autoHeight: true,
     grabCursor: true,
     slideToClickedSlide: true,
     keyboard: {

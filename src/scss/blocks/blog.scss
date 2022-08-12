@@ -227,13 +227,19 @@
     &__blue {
     }
 }
-.blog__swiper.swiper {
-    overflow: visible;
+.blog__swiper {
+    &.swiper {
+        overflow: visible;
+    }
 }
-.blog-swiper__pagination.swiper-pagination {
-    bottom: -100;
-    @media (max-width: $md3) {
-        bottom: -50px;
+.blog-swiper {
+    &__pagination {
+        &.swiper-pagination {
+            bottom: -100;
+            @media (max-width: $md3) {
+                bottom: -50px;
+            }
+        }
     }
 }
 .blog-button {
@@ -251,10 +257,4 @@
         color: #a8b4e5;
         padding: 0px 0px 0px 20px;
     }
-}
-.blog-swiper__pagination.swiper-pagination-bullet {
-    background-color: #adb0b6;
-}
-.blog-swiper__pagination.swiper-pagination-bullet-active {
-    background-color: #5283ff;
 }

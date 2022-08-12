@@ -62,7 +62,7 @@
 }
 .swiper-testimonials {
     &__card {
-        height: 100%;
+        height: max-content;
         width: 100%;
         position: relative;
         background-color: #fff;
