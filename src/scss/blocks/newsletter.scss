@@ -57,6 +57,7 @@
         padding: 0px 0px 0px 20px;
     }
     &__save {
+        transition: all 0.3s ease 0s;
         max-height: 60px;
         font-weight: 700;
         font-size: 13px;
@@ -67,6 +68,9 @@
         border-radius: 5px;
         padding: 22px 62px;
         cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+        }
         @media (min-width: $md2) {
             &:not(:first-child) {
                 margin: 0px 0px 0px 15px;

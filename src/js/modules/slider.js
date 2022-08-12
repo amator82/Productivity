@@ -44,7 +44,6 @@ let blogSlider = new Swiper(blogSwiper, {
     },
     slidesPerView: 1,
     spaceBetween: 10,
-    autoHeight: true,
     touchRatio: 1.5
 })
 
