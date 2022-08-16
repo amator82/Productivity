@@ -26,20 +26,28 @@ export function menuInit() {
     }
 }
 //!</Menu Burger>
-export function dropDown() {
-    const dropDownPreview = document.querySelectorAll('.menu-dropdown__preview')
-    const dropDownContent = document.querySelectorAll('.menu-dropdown__content')
-    const dropDownArrow = document.querySelectorAll('.menu-dropdown__arrow')
-    const dropDownTitle = document.querySelectorAll('.menu-dropdown__title')
 
-    if (dropDownPreview) {
-        dropDownPreview.forEach((item, i) => {
-            item.addEventListener('click', function (e) {
-                dropDownPreview[i].classList.toggle('_open')
-                dropDownContent[i].classList.toggle('_active')
-                dropDownArrow[i].classList.toggle('_active')
-                dropDownTitle[i].classList.toggle('_active')
+export function dropDown() {
+    const link = document.querySelectorAll('.menu-dropdown__link')
+
+    link.forEach((prev) => {
+        const preview = prev.querySelectorAll('.menu-dropdown__preview')
+        const content = prev.querySelectorAll('.menu-dropdown__content')
+
+        prev.addEventListener('click', (el) => {
+            prev.classList.toggle('_open')
+
+            preview.forEach((item) => {
+                const arrow = item
+                    .querySelector('.menu-dropdown__arrow')
+                    .classList.toggle('_active')
+                const title = item
+                    .querySelector('.menu-dropdown__title')
+                    .classList.toggle('_active')
+            })
+            content.forEach((e) => {
+                e.classList.toggle('_active')
             })
         })
-    }
+    })
 }
