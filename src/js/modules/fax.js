@@ -42,19 +42,18 @@ const data = [
     }
 ]
 
-const dropdownMenu = document.querySelector('.help__dropdown-menu')
-console.log(dropdownMenu)
-
 window.addEventListener('DOMContentLoaded', () => {
     displayMenuItems(data)
     dropDown()
 })
 
+const dropdownMenu = document.querySelector('.help__dropdown-menu')
+
 function displayMenuItems(menuItems) {
     let displayMenu = menuItems.map((item) => {
         return `
-        <li class="menu-dropdown__link" data-link="link">
-            <div class="menu-dropdown__preview">
+        <li class="menu-dropdown__link">
+            <div class="menu-dropdown__preview" data-prev="prev">
                 <div class="menu-dropdown__arrow"></div>
                 <div class="menu-dropdown__title">
                     ${item.title}
@@ -79,24 +78,23 @@ function displayMenuItems(menuItems) {
 
 function dropDown() {
     const link = document.querySelectorAll('.menu-dropdown__link')
-    link.forEach((prev) => {
-        const preview = prev.querySelectorAll('.menu-dropdown__preview')
-        const content = prev.querySelectorAll('.menu-dropdown__content')
+    if (link) {
+        link.forEach((prev) => {
+            const preview = prev.querySelector('.menu-dropdown__preview')
 
-        prev.addEventListener('click', (el) => {
-            prev.classList.toggle('_open')
+            preview.addEventListener('click', (el) => {
+                prev.classList.toggle('_open')
 
-            preview.forEach((item) => {
-                const arrow = item
-                    .querySelector('.menu-dropdown__arrow')
-                    .classList.toggle('_active')
-                const title = item
+                const title = prev
                     .querySelector('.menu-dropdown__title')
                     .classList.toggle('_active')
-            })
-            content.forEach((e) => {
-                e.classList.toggle('_active')
+                const arrow = prev
+                    .querySelector('.menu-dropdown__arrow')
+                    .classList.toggle('_active')
+                const content = prev
+                    .querySelector('.menu-dropdown__content')
+                    .classList.toggle('_active')
             })
         })
-    })
+    }
 }
