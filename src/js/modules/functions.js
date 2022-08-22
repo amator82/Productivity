@@ -27,27 +27,3 @@ export function menuInit() {
 }
 //!</Menu Burger>
 
-export function dropDown() {
-    const link = document.querySelectorAll('.menu-dropdown__link')
-
-    link.forEach((prev) => {
-        const preview = prev.querySelectorAll('.menu-dropdown__preview')
-        const content = prev.querySelectorAll('.menu-dropdown__content')
-
-        prev.addEventListener('click', (el) => {
-            prev.classList.toggle('_open')
-
-            preview.forEach((item) => {
-                const arrow = item
-                    .querySelector('.menu-dropdown__arrow')
-                    .classList.toggle('_active')
-                const title = item
-                    .querySelector('.menu-dropdown__title')
-                    .classList.toggle('_active')
-            })
-            content.forEach((e) => {
-                e.classList.toggle('_active')
-            })
-        })
-    })
-}

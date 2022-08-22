@@ -109,9 +109,11 @@
         color: #8d96bd;
     }
     &__button {
+        flex: 0 0 160px;
         transition: background-color 0.3s ease 0s;
         display: inline-flex;
         text-align: center;
+        justify-content: center;
         background-color: #e8ecf4;
         border-radius: 2px;
         padding: 15px;

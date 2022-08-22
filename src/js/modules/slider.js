@@ -8,6 +8,7 @@ let planSlider = new Swiper(mainSwiper, {
         type: 'bullets',
         clickable: true
     },
+    spaceBetween: 10,
     loop: true,
     touchRatio: 1.5,
     autoplay: {
