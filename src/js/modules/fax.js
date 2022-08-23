@@ -1,4 +1,4 @@
-const data = [
+const faxData = [
     {
         id: 1,
         title: 'Reque insolens in vel?',
@@ -42,15 +42,10 @@ const data = [
     }
 ]
 
-window.addEventListener('DOMContentLoaded', () => {
-    displayMenuItems(data)
-    dropDown()
-})
-
 const dropdownMenu = document.querySelector('.help__dropdown-menu')
 
-function displayMenuItems(menuItems) {
-    let displayMenu = menuItems.map((item) => {
+function displayFaxItems(faxItems) {
+    let displayFax = faxItems.map((item) => {
         return `
         <li class="menu-dropdown__link">
             <div class="menu-dropdown__preview" data-prev="prev">
@@ -72,8 +67,8 @@ function displayMenuItems(menuItems) {
         </li>
         `
     })
-    displayMenu = displayMenu.join('')
-    dropdownMenu.innerHTML = displayMenu
+    displayFax = displayFax.join('')
+    dropdownMenu.innerHTML = displayFax
 }
 
 function dropDown() {
@@ -98,3 +93,8 @@ function dropDown() {
         })
     }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    displayFaxItems(faxData)
+    dropDown()
+})
