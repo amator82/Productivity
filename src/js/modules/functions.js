@@ -13,6 +13,7 @@ export function isWebp() {
         document.documentElement.classList.add(className)
     })
 }
+
 //!<Menu Burger>
 export function menuInit() {
     const iconMenu = document.querySelector('.menu__icon')
@@ -27,3 +28,10 @@ export function menuInit() {
 }
 //!</Menu Burger>
 
+window.onload = function () {
+    document.body.classList.add('loaded__hiding')
+    window.setTimeout(function () {
+        document.body.classList.add('loaded')
+        document.body.classList.remove('loaded__hiding')
+    }, 500)
+}

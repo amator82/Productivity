@@ -1,22 +1,23 @@
 <html lang="en">
-    @@include('html/head.html', {'title': 'Главная'})
+    @@include('html/base/head.html', {'title': 'Главная'})
     <body>
+        @@include('html/base/preloader.html', {})
         <div class="wrapper">
-            @@include('html/header.html', {})
+            @@include('html/sections/header.html', {})
             <main class="page">
-                @@include('html/plan.html', {})
-                @@include('html/sponsors.html', {})
-                @@include('html/app.html', {})
-                @@include('html/about.html', {})
-                @@include('html/users.html', {})
-                @@include('html/blog.html', {})
-                @@include('html/testimonials.html', {})
-                @@include('html/help.html', {})
-                @@include('html/getstarted.html', {})
-                @@include('html/newsletter.html', {})
-                @@include('html/footer.html', {})
+                @@include('html/sections/plan.html', {})
+                @@include('html/sections/sponsors.html', {})
+                @@include('html/sections/app.html', {})
+                @@include('html/sections/about.html', {})
+                @@include('html/sections/users.html', {})
+                @@include('html/sections/blog.html', {})
+                @@include('html/sections/testimonials.html', {})
+                @@include('html/sections/help.html', {})
+                @@include('html/sections/getstarted.html', {})
+                @@include('html/sections/newsletter.html', {})
+                @@include('html/sections/footer.html', {})
             </main>
-            @@include('html/js.html', {})
+            @@include('html/base/js.html', {})
         </div>
     </body>
 </html>
