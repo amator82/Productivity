@@ -764,6 +764,9 @@ body._lock {
   background-color: #4c85ff;
   box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
 }
+.button-blue:hover {
+  background-color: #3c79fd;
+}
 @media (max-width: 479.98px) {
   .button-blue {
     flex: 0 0 100px;
@@ -1462,7 +1465,6 @@ body._lock {
 }
 .menu-dropdown__arrow {
   position: relative;
-  transform: scale(var(--ggs, 1));
   width: 22px;
   height: 22px;
   border: 2px solid transparent;
@@ -1504,14 +1506,25 @@ body._lock {
   color: #495274;
 }
 .menu-dropdown__content {
+  animation: growDown 400ms ease-in-out forwards;
+  transform-origin: top center;
   padding: 0 20px;
   display: none;
-  transition: all 0.5s ease 0s;
   align-items: center;
   justify-content: flex-end;
 }
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 .menu-dropdown__content._active {
-  transition: all 0.5s ease 0s;
   display: flex;
   gap: 60px;
 }

@@ -134,6 +134,9 @@
     display: flex;
     background-color: #4c85ff;
     box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
+    &:hover{
+        background-color: #3c79fd;
+    }
     @media (max-width: $md4) {
         flex: 0 0 100px;
     }

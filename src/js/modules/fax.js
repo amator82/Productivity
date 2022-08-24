@@ -60,7 +60,7 @@ function displayFaxItems(faxItems) {
                         ${item.desc}
                     </p>
                 </div>
-                <a href="#" class="menu-dropdown__button">
+                <a href="https://www.youtube.com/watch?v=G1IbRujko-A&t=3321s&ab_channel=10Hours" class="menu-dropdown__button">
                     ${item.btnText}
                 </a>
             </div>

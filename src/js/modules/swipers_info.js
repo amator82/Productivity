@@ -156,7 +156,7 @@ function displayBlogSwiper(blogSwiperItems) {
             <div class="swiper-blog__body">
                 <div class="swiper-blog__items">
                     <div class="swiper-blog__pictures blog-pictures">
-                        <a href="#" class="blog-pictures__desk">
+                        <a href="" class="blog-pictures__desk">
                             <img
                                 src="${item.img[0]}"
                                 alt="Desk"
@@ -168,13 +168,13 @@ function displayBlogSwiper(blogSwiperItems) {
                                 />
                             </div>
                         </a>
-                        <a href="#" class="blog-pictures__picnic">
+                        <a href="" class="blog-pictures__picnic">
                             <img
                                 src="${item.img[1]}"
                                 alt="Picnic"
                             />
                         </a>
-                        <a href="#" class="blog-pictures__callboard">
+                        <a href="" class="blog-pictures__callboard">
                             <img
                                 src="${item.img[2]}"
                                 alt="Call-board"
@@ -190,11 +190,11 @@ function displayBlogSwiper(blogSwiperItems) {
                         </div>
                         <div class="content-blog__links">
                             <a
-                                href="#"
+                                href="https://www.youtube.com/watch?v=G1IbRujko-A&t=3321s&ab_channel=10Hours"
                                 class="content-blog__read btn btn__blue"
                                 >${item.btns[0]}</a
                             >
-                            <a href="#" class="content-blog__add"
+                            <a href="https://www.youtube.com/watch?v=G1IbRujko-A&t=3321s&ab_channel=10Hours" class="content-blog__add"
                                 >${item.btns[1]}</a
                             >
                         </div>

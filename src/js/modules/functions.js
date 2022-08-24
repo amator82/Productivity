@@ -36,6 +36,8 @@ export function menuInit() {
 }
 //!</Menu Burger>
 
+
+//!<Fixed navbar / scroll to top>
 const navbar = document.getElementById('nav')
 const topLink = document.querySelector('.top-link')
 
@@ -55,3 +57,7 @@ window.addEventListener('scroll', () => {
         topLink.classList.remove('show-link')
     }
 })
+//!</Fixed navbar / scroll to top>
+
+const date = document.getElementById('date')
+date.innerHTML = new Date().getFullYear()
