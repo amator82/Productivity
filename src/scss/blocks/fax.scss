@@ -44,7 +44,6 @@
     }
     &__arrow {
         position: relative;
-        transform: scale(var(--ggs, 1));
         width: 22px;
         height: 22px;
         border: 2px solid transparent;
@@ -88,13 +87,24 @@
         }
     }
     &__content {
+        animation: growDown 400ms ease-in-out forwards;
+        transform-origin: top center;
         padding: 0 20px;
         display: none;
-        transition: all 0.5s ease 0s;
         align-items: center;
         justify-content: flex-end;
+        @keyframes growDown {
+            0% {
+                transform: scaleY(0);
+            }
+            80% {
+                transform: scaleY(1.1);
+            }
+            100% {
+                transform: scaleY(1);
+            }
+        }
         &._active {
-            transition: all 0.5s ease 0s;
             display: flex;
             gap: 60px;
         }
