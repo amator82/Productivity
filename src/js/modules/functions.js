@@ -14,6 +14,14 @@ export function isWebp() {
     })
 }
 
+window.onload = function () {
+    document.body.classList.add('loaded__hiding')
+    window.setTimeout(function () {
+        document.body.classList.add('loaded')
+        document.body.classList.remove('loaded__hiding')
+    }, 500)
+}
+
 //!<Menu Burger>
 export function menuInit() {
     const iconMenu = document.querySelector('.menu__icon')
@@ -28,10 +36,15 @@ export function menuInit() {
 }
 //!</Menu Burger>
 
-window.onload = function () {
-    document.body.classList.add('loaded__hiding')
-    window.setTimeout(function () {
-        document.body.classList.add('loaded')
-        document.body.classList.remove('loaded__hiding')
-    }, 500)
-}
+const navbar = document.getElementById('nav')
+
+window.addEventListener('scroll', () => {
+    const scrollHeight = window.pageYOffset
+    const navHeight = navbar.getBoundingClientRect().height
+
+    if (scrollHeight > navHeight) {
+        navbar.classList.add('fixed-nav')
+    } else {
+        navbar.classList.remove('fixed-nav')
+    }
+})

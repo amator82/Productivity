@@ -291,7 +291,15 @@ body._lock {
 
 .header {
   padding: 10px 0;
-  border-bottom: 1px solid #D8E3FE;
+  border-bottom: 1px solid #d8e3fe;
+}
+.header.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
 }
 .header__container {
   position: relative;
