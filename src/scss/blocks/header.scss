@@ -1,14 +1,4 @@
 .header {
-    padding: 10px 0;
-    border-bottom: 1px solid #d8e3fe;
-    &.fixed-nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 100;
-        background-color: #fff;
-    }
     &__container {
         position: relative;
         display: flex;
@@ -39,6 +29,18 @@
     &__menu {
     }
     &__contacts {
+    }
+}
+#nav{
+    padding: 10px 0;
+    border-bottom: 1px solid #d8e3fe;
+    &.fixed-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background-color: #fff;
     }
 }
 .menu {
