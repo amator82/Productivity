@@ -67,3 +67,135 @@ function displayMainSwiper(mainSwiperItems) {
 
 displayMainSwiper(mainSwiperData)
 //! </Main Swiper>
+
+//! <Blog Swiper>
+const blogSwiperData = [
+    {
+        id: 1,
+        title: 'How to start planning',
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit
+            tractatos, vero tractatos ius an, in mel
+            diceret persecuti. Natum petentium
+            principes mei ea. Tota everti periculis
+            vis ei, quas tibique pro at, eos ut
+            decore ...
+        </p>`,
+        decor: '../../img/blog/loupe.svg',
+        img: [
+            `../../img/blog/desk_01.jpg`,
+            `../../img/blog/picnic_02.jpg`,
+            `../../img/blog/call-board_03.jpg`
+        ],
+        btns: ['Read now', 'Add to your bookmarks']
+    },
+    {
+        id: 2,
+        title: 'How to start planning',
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit
+            tractatos, vero tractatos ius an, in mel
+            diceret persecuti.
+        </p>
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit
+            tractatos, vero tractatos ius an...
+        </p>`,
+        decor: '../../img/blog/loupe.svg',
+        img: [
+            `../../img/blog/desk_01.jpg`,
+            `../../img/blog/picnic_02.jpg`,
+            `../../img/blog/call-board_03.jpg`
+        ],
+        btns: ['Read now', 'Add to your bookmarks']
+    },
+    {
+        id: 3,
+        title: 'How to start planning',
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit
+            tractatos, vero tractatos ius an, in mel
+            diceret persecuti. Natum petentium
+            principes mei ea. Tota everti periculis
+            vis ei, quas tibique pro at, eos ut
+            decore ...
+        </p>`,
+        decor: '../../img/blog/loupe.svg',
+        img: [
+            `../../img/blog/desk_01.jpg`,
+            `../../img/blog/picnic_02.jpg`,
+            `../../img/blog/call-board_03.jpg`
+        ],
+        btns: ['Read now', 'Add to your bookmarks']
+    }
+]
+
+const blogSwiper = document.getElementById('blog-swiper')
+
+function displayBlogSwiper(blogSwiperItems) {
+    let displayBlogSwiper = blogSwiperItems.map((item) => {
+        return `
+        <div class="swiper-slide">
+            <div class="swiper-blog__body">
+                <div class="swiper-blog__items">
+                    <div class="swiper-blog__pictures blog-pictures">
+                        <a href="#" class="blog-pictures__desk">
+                            <img
+                                src="${item.img[0]}"
+                                alt="Desk"
+                            />
+                            <div class="blog-pictures__loupe">
+                                <img
+                                    src="${item.decor}"
+                                    alt="Loupe"
+                                />
+                            </div>
+                        </a>
+                        <a href="#" class="blog-pictures__picnic">
+                            <img
+                                src="${item.img[1]}"
+                                alt="Picnic"
+                            />
+                        </a>
+                        <a href="#" class="blog-pictures__callboard">
+                            <img
+                                src="${item.img[2]}"
+                                alt="Call-board"
+                            />
+                        </a>
+                    </div>
+                    <div class="swiper-blog__content content-blog">
+                        <div class="content-blog__title title">
+                            ${item.title}
+                        </div>
+                        <div class="content-blog__text text">
+                            ${item.text}
+                        </div>
+                        <div class="content-blog__links">
+                            <a
+                                href="#"
+                                class="content-blog__read btn btn__blue"
+                                >${item.btns[0]}</a
+                            >
+                            <a href="#" class="content-blog__add"
+                                >${item.btns[1]}</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `
+    })
+    displayBlogSwiper = displayBlogSwiper.join('')
+    blogSwiper.innerHTML = displayBlogSwiper
+}
+displayBlogSwiper(blogSwiperData)
+//! </Blog Swiper>
