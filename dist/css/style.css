@@ -1274,6 +1274,10 @@ body._lock {
   content: "";
 }
 
+#blog-swiper {
+  align-items: center;
+}
+
 .testimonials {
   padding-top: 100px;
   padding-bottom: 150px;

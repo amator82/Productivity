@@ -4,7 +4,11 @@ const mainSwiperData = [
         id: 1,
         info: 'PLAN YOUR LIFE',
         title: `Increase your <span>productivity</span>`,
-        text: `<p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>`,
+        text: `
+        <p>
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+        </p>
+        `,
         btn: '../../img/plan/play.svg',
         backgroungImage: `../../img/plan/background.jpg`
     },
@@ -13,13 +17,15 @@ const mainSwiperData = [
         info: 'Choose yourself',
         title: `Choose your <span>character</span>`,
         text: `
-        <p>I-I-I-I'm from Hell
-        Deep within the darkest place you'll ever be
-        I'm from Hell
-        Do the shit that demons do and make you bleed
-        I'm from Hell
-        Make you witness shit that you won't wanna see
-        What the hell?</p>`,
+        <p>
+            I-I-I-I'm from Hell
+            Deep within the darkest place you'll ever be
+            I'm from Hell
+            Do the shit that demons do and make you bleed
+            I'm from Hell
+            Make you witness shit that you won't wanna see
+            What the hell?
+        </p>`,
         btn: '../../img/plan/play.svg',
         backgroungImage: `../../img/plan/background.jpg`
     },
@@ -27,13 +33,16 @@ const mainSwiperData = [
         id: 3,
         info: 'Just feel it',
         title: `Increase your <span>productivity</span>`,
-        text: `<p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>`,
+        text: `
+        <p>
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+        </p>`,
         btn: '../../img/plan/play.svg',
         backgroungImage: `../../img/plan/background.jpg`
     }
 ]
 
-const mainSwiper = document.querySelector('.main__slides')
+const mainSwiper = document.getElementById('main-swiper')
 
 function displayMainSwiper(mainSwiperItems) {
     let displayMainSwiper = mainSwiperItems.map((item) => {
@@ -74,15 +83,16 @@ const blogSwiperData = [
         id: 1,
         title: 'How to start planning',
         text: `
-        <p>
-            Quidam vocibus eum ne, erat consectetuer
-            voluptatibus ut nam. Eu usu vidit
-            tractatos, vero tractatos ius an, in mel
-            diceret persecuti. Natum petentium
-            principes mei ea. Tota everti periculis
-            vis ei, quas tibique pro at, eos ut
-            decore ...
-        </p>`,
+            <p>
+                Quidam vocibus eum ne, erat consectetuer
+                voluptatibus ut nam. Eu usu vidit
+                tractatos, vero tractatos ius an, in mel
+                diceret persecuti. Natum petentium
+                principes mei ea. Tota everti periculis
+                vis ei, quas tibique pro at, eos ut
+                decore ...
+            </p>
+        `,
         decor: '../../img/blog/loupe.svg',
         img: [
             `../../img/blog/desk_01.jpg`,
@@ -199,3 +209,120 @@ function displayBlogSwiper(blogSwiperItems) {
 }
 displayBlogSwiper(blogSwiperData)
 //! </Blog Swiper>
+
+//! <Testimonials Swiper>
+const testimonialsSwiperData = [
+    {
+        id: 1,
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit tractatos,
+            vero tractatos ius an, in mel diceret persecuti.
+        </p>`,
+        img: `../../img/testimonials/bill.jpg`
+    },
+    {
+        id: 2,
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit tractatos.
+        </p>
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit tractatos.
+        </p>`,
+        img: `../../img/testimonials/bill.jpg`
+    },
+    {
+        id: 3,
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer.
+        </p>`,
+        img: `../../img/testimonials/bill.jpg`
+    },
+    {
+        id: 4,
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit tractatos,
+            vero tractatos ius an, in mel diceret persecuti.
+        </p>`,
+        img: `../../img/testimonials/bill.jpg`
+    },
+    {
+        id: 5,
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit tractatos,
+            vero tractatos ius an, in mel diceret persecuti.
+        </p>`,
+        img: `../../img/testimonials/bill.jpg`
+    },
+    {
+        id: 6,
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit tractatos,
+            vero tractatos ius an, in mel diceret persecuti.
+        </p>`,
+        img: `../../img/testimonials/bill.jpg`
+    },
+    {
+        id: 7,
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit tractatos,
+            vero tractatos ius an, in mel diceret persecuti.
+        </p>`,
+        img: `../../img/testimonials/bill.jpg`
+    },
+    {
+        id: 8,
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit tractatos,
+            vero tractatos ius an, in mel diceret persecuti.
+        </p>`,
+        img: `../../img/testimonials/bill.jpg`
+    },
+    {
+        id: 9,
+        text: `
+        <p>
+            Quidam vocibus eum ne, erat consectetuer
+            voluptatibus ut nam. Eu usu vidit tractatos,
+            vero tractatos ius an, in mel diceret persecuti.
+        </p>`,
+        img: `../../img/testimonials/bill.jpg`
+    },
+]
+
+const testimonialsSwiper = document.getElementById('testimonials-swiper')
+
+function displayTestimonialsSwiper(testimonialsSwiperItems) {
+    let displayTestimonialsSwiper = testimonialsSwiperItems.map((item) => {
+        return `
+        <div class="swiper-testimonials__card swiper-slide">
+            <div class="swiper-testimonials__text">
+                ${item.text}
+            </div>
+            <div class="swiper-testimonials__avatar">
+                <img src="${item.img}" alt="Bill" />
+            </div>
+        </div>
+        `
+    })
+    displayTestimonialsSwiper = displayTestimonialsSwiper.join('')
+    testimonialsSwiper.innerHTML = displayTestimonialsSwiper
+}
+
+displayTestimonialsSwiper(testimonialsSwiperData)
+//! </Testimonials Swiper>
