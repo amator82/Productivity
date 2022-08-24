@@ -291,6 +291,7 @@ body._lock {
 
 .header {
   padding: 10px 0;
+  border-bottom: 1px solid #D8E3FE;
 }
 .header__container {
   position: relative;
@@ -484,7 +485,7 @@ body._lock {
 }
 @media (max-width: 479.98px) {
   .main-slide__content {
-    padding: 40px 0px 100px 0px;
+    padding: 50px 0px 130px 0px;
   }
 }
 .main-slide__info:not(:last-child) {
@@ -598,6 +599,7 @@ body._lock {
 }
 
 .app {
+  border-top: 1px solid #d8e3fe;
   position: relative;
   padding: 170px 0px;
   background-color: #F5F8FF;
@@ -796,6 +798,7 @@ body._lock {
 }
 
 .about {
+  border-top: 1px solid #d8e3fe;
   padding: 160px 0px 140px 0px;
 }
 @media (max-width: 767.98px) {
@@ -1279,6 +1282,7 @@ body._lock {
 }
 
 .testimonials {
+  border-top: 1px solid #d8e3fe;
   padding-top: 100px;
   padding-bottom: 150px;
   position: relative;
@@ -1400,6 +1404,7 @@ body._lock {
 }
 
 .help {
+  border-top: 1px solid #d8e3fe;
   padding: 160px 0;
 }
 @media (max-width: 767.98px) {
@@ -1526,6 +1531,7 @@ body._lock {
 }
 
 .getstarted {
+  border-top: 1px solid #d8e3fe;
   padding: 90px 0;
   position: relative;
 }
@@ -1659,6 +1665,7 @@ body._lock {
 
 .newsletter {
   padding: 120px 0;
+  border-top: 1px solid #d8e3fe;
 }
 .newsletter__container {
   max-width: 958px;
@@ -1741,6 +1748,7 @@ body._lock {
 }
 
 .footer {
+  border-top: 1px solid #d8e3fe;
   background-color: #F5F8FF;
   padding: 80px 0 40px 0;
 }

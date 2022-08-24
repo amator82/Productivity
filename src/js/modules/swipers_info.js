@@ -10,7 +10,7 @@ const mainSwiperData = [
         </p>
         `,
         btn: '../../img/plan/play.svg',
-        backgroungImage: `../../img/plan/background.jpg`
+        backgroungImage: `../../img/plan/background.png`
     },
     {
         id: 2,
@@ -27,7 +27,7 @@ const mainSwiperData = [
             What the hell?
         </p>`,
         btn: '../../img/plan/play.svg',
-        backgroungImage: `../../img/plan/background.jpg`
+        backgroungImage: `../../img/plan/background.png`
     },
     {
         id: 3,
@@ -38,7 +38,7 @@ const mainSwiperData = [
             Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
         </p>`,
         btn: '../../img/plan/play.svg',
-        backgroungImage: `../../img/plan/background.jpg`
+        backgroungImage: `../../img/plan/background.png`
     }
 ]
 
@@ -302,7 +302,7 @@ const testimonialsSwiperData = [
             vero tractatos ius an, in mel diceret persecuti.
         </p>`,
         img: `../../img/testimonials/bill.jpg`
-    },
+    }
 ]
 
 const testimonialsSwiper = document.getElementById('testimonials-swiper')

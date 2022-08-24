@@ -23,11 +23,7 @@ let planSlider = new Swiper(mainSwiper, {
         pageUpDown: true
     },
     breakpoints: {
-        320: {
-            spaceBetween: 10
-        },
         768: {
-            spaceBetween: 0,
             grabCursor: true
         }
     }

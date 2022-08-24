@@ -4,6 +4,6 @@ flsFunctions.isWebp()
 //! Подключение меню бургер
 flsFunctions.menuInit()
 
-import './modules/swipers_func.js'
 import './modules/swipers_info.js'
+import './modules/swipers_func.js'
 import './modules/fax.js'
