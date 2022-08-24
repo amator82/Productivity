@@ -2,4 +2,4 @@ node_modules/
 .vscode/
 version.json
 *.zip
-gulp/config/
+gulp/
