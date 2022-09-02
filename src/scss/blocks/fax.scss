@@ -4,6 +4,9 @@
     @media (max-width: $md3) {
         padding: 70px 0;
     }
+    @media (max-width: $md4) {
+        padding: 50px 0;
+    }
     &__container {
     }
     &__info {
@@ -18,6 +21,9 @@
         margin: 0px 0px 50px 0px;
         @media (max-width: $md3) {
             margin: 0px 0px 30px 0px;
+        }
+        @media (max-width: $md4) {
+            margin: 0px 0px 20px 0px;
         }
     }
     &__list {
@@ -38,6 +44,9 @@
         align-items: center;
         text-align: center;
         margin-left: 25px;
+        @media (max-width: $md4) {
+            margin-left: 10px;
+        }
         &._open {
             margin-bottom: 15px;
         }
@@ -89,7 +98,7 @@
     &__content {
         animation: growDown 400ms ease-in-out forwards;
         transform-origin: top center;
-        padding: 0 20px;
+        padding: 15px 20px;
         display: none;
         align-items: center;
         justify-content: flex-end;
@@ -107,6 +116,9 @@
         &._active {
             display: flex;
             gap: 60px;
+            @media (max-width: $md4) {
+                gap: 15px;
+            }
         }
     }
     &__text {
