@@ -14,8 +14,8 @@
         background: linear-gradient(180deg, #eaf0ff 0%, #f6f9ff 100%);
     }
     @media (max-width: $md3) {
-        padding-top: 50;
-        padding-bottom: 100px;
+        padding-top: 50px;
+        padding-bottom: 70px;
     }
     &__container {
         max-width: 960px;
@@ -23,21 +23,33 @@
     }
     &__body {
         display: flex;
+        @media (max-width: $md4) {
+            flex-direction: column;
+        }
     }
     &__content {
         z-index: 20;
         flex: 1 1 auto;
     }
     &__swiper {
-        padding: 0px 0px 0px 10px;
-        margin-right: 0;
+        padding-left: 20px;
         width: 430px;
         z-index: 20;
+        @media (max-width: $md3) {
+            width: 350px;
+        }
+        @media (max-width: $md4) {
+            width: 100%;
+            padding: 0;
+        }
     }
 }
 .content-testimonials {
     max-width: 340px;
     margin: 20px 0px 0px 0px;
+    @media (max-width: $md4) {
+        margin: 0;
+    }
     &__info {
         margin: 0px 0px 30px 0px;
         @media (max-width: $md3) {
@@ -69,11 +81,13 @@
         background-color: #fff;
         border: 1px solid #d8e3fe;
         box-shadow: 0px 5px 50px #f3f5fa;
+        @media (max-width: $md4) {
+            margin: 20px 0px 0px 0px;
+        }
     }
     &__text {
-        padding: 0 10px;
-        margin: 45px auto;
-        max-width: 320px;
+        padding: 45px 70px;
+        margin: 0 auto;
         color: #676f95;
         line-height: calc(24 / 14 * 100%);
         letter-spacing: 0.03em;
@@ -81,6 +95,9 @@
             &:not(:last-child) {
                 margin-bottom: 15px;
             }
+        }
+        @media (max-width: $md3) {
+            padding: 50px 40px;
         }
     }
     &__avatar {
@@ -112,5 +129,5 @@
     opacity: 0.8;
 }
 .testimonials-swiper__pagination.swiper-pagination {
-    bottom: -78;
+    bottom: -50;
 }
