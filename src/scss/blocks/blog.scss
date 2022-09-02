@@ -22,6 +22,12 @@
         font-size: 24px;
         line-height: calc(30 / 24 * 100%);
         margin: 0px 0px 90px 0px;
+        @media (max-width: $md3) {
+            margin: 0px 0px 50px 0px;
+        }
+        @media (max-width: $md4) {
+            margin: 0px 0px 30px 0px;
+        }
     }
     &__swiper {
     }
@@ -44,12 +50,18 @@
         }
     }
     &__pictures {
+        @media (max-width: $md4) {
+            flex: 0 0 40%;
+        }
     }
     &__content {
         max-width: 410px;
         padding: 0 0 0 10px;
         @media (max-width: $md3) {
             max-width: 320px;
+        }
+        @media (max-width: $md4) {
+            flex: 0 0 60%;
         }
     }
 }
@@ -60,15 +72,23 @@
     grid-template-areas:
         'A B'
         'A C';
+    @media (max-width: $md3) {
+        grid-template-areas:
+            'A A'
+            'B C';
+    }
     &__desk {
         margin: auto;
-        grid-template-columns: (1fr, 1fr);
         grid-area: A;
         position: relative;
         overflow: hidden;
         width: 100%;
         height: 100%;
         border-radius: 5px;
+        img {
+            width: 267px;
+            height: 267px;
+        }
         &::after {
             content: '';
             width: 100%;
@@ -86,13 +106,15 @@
         }
         &:hover {
             img {
-                transition: all 0.5s ease 0s;
+                transition: all 0.5s ease-in-out;
                 transform: scale(1.1);
             }
         }
-        img {
-            width: 267px;
-            height: 267px;
+        @media (max-width: $md3) {
+            grid-area: A B;
+        }
+        @media (max-width: $md4) {
+            height: 167px;
         }
     }
     &__loupe {
@@ -112,6 +134,9 @@
         img {
             width: 17px;
             height: 17px;
+        }
+        @media (max-width: $md4) {
+            display: none;
         }
     }
     &__picnic {
@@ -146,8 +171,8 @@
             }
         }
         img {
-            width: 126px;
-            height: 126px;
+            min-width: 127px;
+            min-height: 127px;
         }
     }
     &__callboard {
@@ -173,8 +198,8 @@
             );
         }
         img {
-            width: 126px;
-            height: 126px;
+            min-width: 127px;
+            min-height: 127px;
         }
         &:hover {
             img {
@@ -191,7 +216,7 @@
         line-height: calc(45 / 36 * 100%);
         margin: 0px 0px 30px 0px;
         @media (max-width: $md3) {
-            font-size: 34px;
+            font-size: 30px;
             margin: 0px 0px 20px 0px;
         }
     }
@@ -208,6 +233,9 @@
         }
     }
     &__links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
     }
     &__read {
     }
@@ -219,6 +247,9 @@
         color: #a6b6da;
         &:hover {
             text-decoration: underline;
+        }
+        @media (max-width: $md4) {
+            margin: 20px 0px 0px 0px;
         }
     }
 }
@@ -239,6 +270,9 @@
             @media (max-width: $md3) {
                 bottom: -50px;
             }
+            @media (max-width: $md4) {
+                bottom: -20px;
+            }
         }
     }
 }
@@ -258,6 +292,6 @@
         padding: 0px 0px 0px 20px;
     }
 }
-#blog-swiper{
+#blog-swiper {
     align-items: center;
 }
