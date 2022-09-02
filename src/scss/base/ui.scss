@@ -61,7 +61,7 @@
     letter-spacing: 0.03em;
     color: #8d96bd;
     @media (max-width: $md4) {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 .title {
@@ -69,4 +69,9 @@
     span {
         font-weight: 500;
     }
+}
+.line{
+    height: 1px;
+    width: 15px;
+    background-color: #DAE4FE;
 }
