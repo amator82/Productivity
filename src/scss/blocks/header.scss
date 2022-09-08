@@ -31,7 +31,7 @@
     &__contacts {
     }
 }
-#nav{
+#nav {
     padding: 10px 0;
     border-bottom: 1px solid #d8e3fe;
     &.fixed-nav {
@@ -80,6 +80,9 @@
             &:not(:last-child) {
                 margin: 0px 40px 0px 0px;
             }
+        }
+        @media (max-width: $md2) {
+            margin: 0px 35px 0px 0px;
         }
         @media (max-width: $md3) {
             flex-direction: column;
