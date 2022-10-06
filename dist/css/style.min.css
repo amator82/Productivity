@@ -385,6 +385,11 @@ body._lock {
 .menu__list li:not(:last-child) {
   margin: 0px 40px 0px 0px;
 }
+@media (max-width: 991.98px) {
+  .menu__list {
+    margin: 0px 35px 0px 0px;
+  }
+}
 @media (max-width: 767.98px) {
   .menu__list {
     flex-direction: column;
@@ -1930,12 +1935,12 @@ body._lock {
 }
 .button-newsletter__save {
   margin: 0px 0px 0px 15px;
+  flex: 0 0 130px;
   transition: all 0.3s ease 0s;
   max-height: 60px;
   background: #4d6ce1;
   box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
   border-radius: 5px;
-  padding: 22px 62px;
   cursor: pointer;
 }
 .button-newsletter__save:hover {
