@@ -1,6 +1,5 @@
 @import './base/null.scss';
 //! <Подключение шрифтов>
-// &display=swap
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:regular,500,600,700&display=swap');
 @import './base/fonts.scss';
@@ -18,7 +17,7 @@ body {
     color: #000;
     font-size: 14px;
     font-family: $fontFamily;
-    &._lock{
+    &._lock {
         overflow: hidden;
     }
 }
@@ -43,7 +42,7 @@ body {
     @media (max-width: $md3) {
     }
 }
-.page{
+.page {
     flex: 1 1 auto;
 }
 //! </Основная сетка>
@@ -51,18 +50,6 @@ body {
 //! <Подключение блоков>
 @import './base/ui.scss';
 @import './base/swiper.scss';
-@import './base/preloader.scss';
-
-@import './blocks/header.scss';
-@import './blocks/plan.scss';
-@import './blocks/sponsors.scss';
-@import './blocks/app.scss';
-@import './blocks/about.scss';
-@import './blocks/users.scss';
-@import './blocks/blog.scss';
-@import './blocks/testimonials.scss';
-@import './blocks/fax.scss';
-@import './blocks/getstarted.scss';
-@import './blocks/newsletter.scss';
-@import './blocks/footer.scss';
+@import './base/common.scss';
 //! </Подключение блоков>
+@import './home.scss';
