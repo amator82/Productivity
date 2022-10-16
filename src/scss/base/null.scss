@@ -1,67 +1,60 @@
-/*Обнуление*/
-html {
-    scroll-behavior: smooth;
-}
 * {
-    padding: 0;
-    margin: 0;
-    border: 0;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
 }
 *,
 *:before,
 *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 :focus,
 :active {
-    outline: none;
+    // outline: none;
 }
 a:focus,
 a:active {
-    outline: none;
-}
-nav,
-footer,
-header,
-aside {
-    display: block;
+    // outline: none;
 }
 html,
 body {
     height: 100%;
-    width: 100%;
-    font-size: 100%;
+    min-width: $minWidth + px;
+}
+body {
+    color: $mainColor;
     line-height: 1;
-    font-size: 14px;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    //text-rendering: optimizeLegibility;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 input,
 button,
 textarea {
-    font-family: inherit;
-}
-input::-ms-clear {
-    display: none;
+    font-family: $fontFamily;
+    font-size: inherit;
 }
 button {
     cursor: pointer;
+    color: inherit;
+    background-color: inherit;
 }
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+a {
+    color: inherit;
 }
-a,
+a:link,
 a:visited {
     text-decoration: none;
 }
 a:hover {
     text-decoration: none;
 }
-ul,li {
+ul li {
     list-style: none;
 }
 img {
@@ -73,7 +66,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: inherit;
     font-weight: inherit;
+    font-size: inherit;
 }
-/*--------------------*/

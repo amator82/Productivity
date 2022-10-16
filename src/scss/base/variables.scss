@@ -1,10 +1,24 @@
-$minwidth: 320px;
-$maxWidthContainer: 1226px;
-$md1: $maxWidthContainer + 12;
 $md2: 991.98px;
 $md3: 767.98px;
 $md4: 479.98px;
 
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1230;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$responsiveType: 1;
+
+//! Брейк-поинты
+$pc: em(
+    $containerWidth
+); //? ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); //? Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); //? Телефоны L
+$mobileSmall: em(479.98); //? Телефоны S
+
+$mainColor: #000;
 $white: #fff;
 $bgc: #F5F8FF;
 $blue: #5E81FE;
@@ -13,4 +27,5 @@ $grey: #697CA6;
 $darkgrey: #D2E1FF;
 
 $fontFamily: 'Quicksand';
-$roboto: 'Roboto'
+$roboto: 'Roboto';
+$fontSize: rem(14)
