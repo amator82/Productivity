@@ -1,4 +1,4 @@
-._ibg {
+[class*='-ibg'] {
     position: relative;
     img {
         position: absolute;
@@ -9,18 +9,23 @@
         object-fit: cover;
     }
 }
+[class*='-ibg_contain'] {
+    img {
+        object-fit: contain;
+    }
+}
 .btn {
     align-items: center;
     justify-content: center;
-    flex: 0 0 113px;
     transition: background-color 0.3s ease 0s;
     text-align: center;
     font-weight: 700;
-    font-size: 13px;
-    line-height: calc(16 / 13 * 100%);
+    font-size: rem(13);
+    line-height: math.div(16, 13);
     border-radius: 2px;
     padding: 13px 15px;
     &__blue {
+        width: rem(113);
         background-color: #d2e1ff;
         color: #3a79ff;
         &:hover {
@@ -70,8 +75,8 @@
         font-weight: 500;
     }
 }
-.line{
+.line {
     height: 1px;
     width: 15px;
-    background-color: #DAE4FE;
+    background-color: #dae4fe;
 }

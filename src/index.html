@@ -6,11 +6,14 @@
             @@include('html/base/header.html', {})
             <main class="page">
                 <section class="plan">
-                    <div class="main__swiper swiper swiper-container">
-                        <div
-                            class="main__slides swiper-wrapper"
-                            id="main-swiper"
-                        ></div>
+                    <!-- Оболочка слайдера -->
+                    <div class="main__slider swiper">
+                        <!-- Двигающееся часть слайдера -->
+                        <div class="main__wrapper swiper-wrapper">
+                            <!-- Слайд -->
+                            <div class="main__slide swiper-slide"></div>
+                        </div>
+                        <!-- Если нужна пагинация -->
                         <div
                             class="main__swiper-pagination swiper-pagination"
                         ></div>
@@ -220,68 +223,295 @@
                     </div>
                 </section>
                 <section class="users" id="users">
-                    <div class="users__container">
-                        <div class="users__items">
-                            <div class="item-customers">
-                                <div class="item-customers__content">
-                                    <div class="item-customers__image">
-                                        <img
-                                            src="@img/users/circle.svg"
-                                            alt="Circle"
-                                        />
-                                    </div>
-                                    <div
-                                        class="item-customers__percents number"
-                                        data-value="89%"
-                                    >
-                                        0%
-                                    </div>
-                                    <div class="item-customers__text">
-                                        Customers who have increased their
-                                        productivity
-                                    </div>
+                    <div class="users__items">
+                        <div class="item-customers">
+                            <div class="item-customers__content">
+                                <div class="item-customers__image">
+                                    <img
+                                        src="@img/users/circle.svg"
+                                        alt="Circle"
+                                    />
+                                </div>
+                                <div
+                                    class="item-customers__percents number"
+                                    data-value="89%"
+                                >
+                                    0%
+                                </div>
+                                <div class="item-customers__text">
+                                    Customers who have increased their
+                                    productivity
                                 </div>
                             </div>
-                            <div class="item-users">
-                                <div class="item-users__content">
-                                    <div class="item-users__image">
-                                        <img
-                                            src="@img/users/human.svg"
-                                            alt="Human"
-                                        />
-                                    </div>
-                                    <div
-                                        class="item-users__number number"
-                                        data-value="3123+"
-                                    >
-                                        0+
-                                    </div>
-                                    <div class="item-users__text">
-                                        Users who have used our application
-                                    </div>
+                        </div>
+                        <div class="item-users">
+                            <div class="item-users__content">
+                                <div class="item-users__image">
+                                    <img
+                                        src="@img/users/human.svg"
+                                        alt="Human"
+                                    />
+                                </div>
+                                <div
+                                    class="item-users__number number"
+                                    data-value="3123+"
+                                >
+                                    0+
+                                </div>
+                                <div class="item-users__text">
+                                    Users who have used our application
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section class="blog">
-                    <div class="blog__container _container">
+                    <div class="blog__container">
                         <div class="blog__info info">OUR RESOURCES</div>
                         <div class="blog__title title">
                             Start reading our blog
                         </div>
-                        <div
-                            class="blog__swiper swiper swiper-container swiper-blog"
-                        >
-                            <div class="swiper-wrapper" id="blog-swiper"></div>
-                            <div
-                                class="blog-swiper__pagination swiper-pagination"
-                            ></div>
-                            <div class="swiper-button-prev blog-button__prev">
-                                <img src="@img/blog/01.svg" alt="" />
+                        <div class="blog__slider swiper">
+                            <div class="blog__wrapper swiper-wrapper">
+                                <div
+                                    class="blog__slide swiper-slide slide-blog"
+                                >
+                                    <div class="slide-blog__body">
+                                        <div
+                                            data-swiper-parallax="-100"
+                                            class="slide-blog__images images-blog"
+                                        >
+                                            <div
+                                                class="images-blog__item-ibg images-blog__item_1"
+                                            >
+                                                <img
+                                                    src="@img/blog/desk_01.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div
+                                                class="images-blog__item-ibg images-blog__item_2"
+                                            >
+                                                <img
+                                                    src="@img/blog/picnic_02.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div
+                                                class="images-blog__item-ibg images-blog__item_3"
+                                            >
+                                                <img
+                                                    src="@img/blog/call-board_03.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-swiper-parallax="-150"
+                                            class="slide-blog__content content-slide-blog"
+                                        >
+                                            <div
+                                                class="content-slide-blog__title title"
+                                            >
+                                                How to start planning
+                                            </div>
+                                            <div
+                                                class="content-slide-blog__text text"
+                                            >
+                                                Quidam vocibus eum ne, erat
+                                                consectetuer voluptatibus ut
+                                                nam. Eu usu vidit tractatos,
+                                                vero tractatos ius an, in mel
+                                                diceret persecuti. Natum
+                                                petentium principes mei ea. Tota
+                                                everti periculis vis ei, quas
+                                                tibique pro at, eos ut decore
+                                                ...
+                                            </div>
+                                            <div
+                                                class="content-slide-blog__buttons"
+                                            >
+                                                <button
+                                                    class="content-slide-blog__buttons_1 btn btn__blue"
+                                                    type="button"
+                                                >
+                                                    Read now
+                                                </button>
+                                                <button
+                                                    class="content-slide-blog__buttons_2 btn"
+                                                    type="button"
+                                                >
+                                                    Add to your bookmarks
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="blog__slide swiper-slide slide-blog"
+                                >
+                                    <div class="slide-blog__body">
+                                        <div
+                                            data-swiper-parallax="-100"
+                                            class="blog-slide__images images-blog"
+                                        >
+                                            <div
+                                                class="images-blog__item-ibg images-blog__item_1"
+                                            >
+                                                <img
+                                                    src="@img/blog/desk_01.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div
+                                                class="images-blog__item-ibg images-blog__item_2"
+                                            >
+                                                <img
+                                                    src="@img/blog/picnic_02.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div
+                                                class="images-blog__item-ibg images-blog__item_3"
+                                            >
+                                                <img
+                                                    src="@img/blog/call-board_03.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-swiper-parallax="-150"
+                                            class="slide-blog__content content-slide-blog"
+                                        >
+                                            <div
+                                                class="content-slide-blog__title title"
+                                            >
+                                                How to start planning
+                                            </div>
+                                            <div
+                                                class="content-slide-blog__text text"
+                                            >
+                                                Quidam vocibus eum ne, erat
+                                                consectetuer voluptatibus ut
+                                                nam. Eu usu vidit tractatos,
+                                                vero tractatos ius an, in mel
+                                                diceret persecuti. Natum
+                                                petentium principes mei ea. Tota
+                                                everti periculis vis ei, quas
+                                                tibique pro at, eos ut decore
+                                                ...
+                                            </div>
+                                            <div
+                                                class="content-slide-blog__buttons"
+                                            >
+                                                <button
+                                                    class="content-slide-blog__buttons_1 btn btn__blue"
+                                                    type="button"
+                                                >
+                                                    Read now
+                                                </button>
+                                                <button
+                                                    class="content-slide-blog__buttons_2 btn"
+                                                    type="button"
+                                                >
+                                                    Add to your bookmarks
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="blog__slide swiper-slide slide-blog"
+                                >
+                                    <div class="slide-blog__body">
+                                        <div
+                                            data-swiper-parallax="-100"
+                                            class="blog-slide__images images-blog"
+                                        >
+                                            <div
+                                                class="images-blog__item-ibg images-blog__item_1"
+                                            >
+                                                <img
+                                                    src="@img/blog/desk_01.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div
+                                                class="images-blog__item-ibg images-blog__item_2"
+                                            >
+                                                <img
+                                                    src="@img/blog/picnic_02.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div
+                                                class="images-blog__item-ibg images-blog__item_3"
+                                            >
+                                                <img
+                                                    src="@img/blog/call-board_03.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-swiper-parallax="-150"
+                                            class="slide-blog__content content-slide-blog"
+                                        >
+                                            <div
+                                                class="content-slide-blog__title title"
+                                            >
+                                                How to start planning
+                                            </div>
+                                            <div
+                                                class="content-slide-blog__text text"
+                                            >
+                                                Quidam vocibus eum ne, erat
+                                                consectetuer voluptatibus ut
+                                                nam. Eu usu vidit tractatos,
+                                                vero tractatos ius an, in mel
+                                                diceret persecuti. Natum
+                                                petentium principes mei ea. Tota
+                                                everti periculis vis ei, quas
+                                                tibique pro at, eos ut decore
+                                                ...
+                                            </div>
+                                            <div
+                                                class="content-slide-blog__buttons"
+                                            >
+                                                <button
+                                                    class="content-slide-blog__buttons_1 btn btn__blue"
+                                                    type="button"
+                                                >
+                                                    Read now
+                                                </button>
+                                                <button
+                                                    class="content-slide-blog__buttons_2 btn"
+                                                    type="button"
+                                                >
+                                                    Add to your bookmarks
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="swiper-button-next blog-button__next">
-                                <img src="@img/blog/02.svg" alt="" />
+                            <div class="blog__controll controll-blog">
+                                <div
+                                    class="controll-blog__dotts swiper-pagination"
+                                ></div>
+                                <button
+                                    type="button"
+                                    class="controll-blog__prev swiper-button-prev"
+                                >
+                                    <img src="@img/blog/01.svg" alt="" />
+                                </button>
+                                <button
+                                    type="button"
+                                    class="controll-blog__next swiper-button-next"
+                                >
+                                    <img src="@img/blog/02.svg" alt="" />
+                                </button>
                             </div>
                         </div>
                     </div>

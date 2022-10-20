@@ -42,14 +42,14 @@ const mainSwiperData = [
     }
 ]
 
-const mainSwiper = document.getElementById('main-swiper')
+const mainSwiper = document.querySelector('.main__wrapper')
 
 function displayMainSwiper(mainSwiperItems) {
     let displayMainSwiper = mainSwiperItems.map((item) => {
         return `
         <div class="main-slide swiper-slide">
                 <div class="main-slide__content">
-                    <div class="main-slide__container _container">
+                    <div class="main-slide__container">
                         <div class="main-slide__info info">
                             ${item.info}
                         </div>
@@ -64,7 +64,7 @@ function displayMainSwiper(mainSwiperItems) {
                         </button>
                     </div>
                 </div>
-                <div class="main-slide__background _ibg">
+                <div class=" main-slide__background main-slide__background-ibg">
                     <img src="${item.backgroungImage}" alt="backgroungImage" />
                 </div>
             </div>
@@ -147,67 +147,67 @@ const blogSwiperData = [
     }
 ]
 
-const blogSwiper = document.getElementById('blog-swiper')
+const blogSwiper = document.querySelector('.blog__wrapper')
 
-function displayBlogSwiper(blogSwiperItems) {
-    let displayBlogSwiper = blogSwiperItems.map((item) => {
-        return `
-        <div class="swiper-slide">
-            <div class="swiper-blog__body">
-                <div class="swiper-blog__items">
-                    <div class="swiper-blog__pictures blog-pictures">
-                        <a href="" class="blog-pictures__desk">
-                            <img
-                                src="${item.img[0]}"
-                                alt="Desk"
-                            />
-                            <div class="blog-pictures__loupe">
-                                <img
-                                    src="${item.decor}"
-                                    alt="Loupe"
-                                />
-                            </div>
-                        </a>
-                        <a href="" class="blog-pictures__picnic">
-                            <img
-                                src="${item.img[1]}"
-                                alt="Picnic"
-                            />
-                        </a>
-                        <a href="" class="blog-pictures__callboard">
-                            <img
-                                src="${item.img[2]}"
-                                alt="Call-board"
-                            />
-                        </a>
-                    </div>
-                    <div class="swiper-blog__content content-blog">
-                        <div class="content-blog__title title">
-                            ${item.title}
-                        </div>
-                        <div class="content-blog__text text">
-                            ${item.text}
-                        </div>
-                        <div class="content-blog__links">
-                            <a
-                                href="https://www.youtube.com/watch?v=G1IbRujko-A&t=3321s&ab_channel=10Hours"
-                                class="content-blog__read btn btn__blue"
-                                >${item.btns[0]}</a
-                            >
-                            <a href="https://www.youtube.com/watch?v=G1IbRujko-A&t=3321s&ab_channel=10Hours" class="content-blog__add"
-                                >${item.btns[1]}</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        `
-    })
-    displayBlogSwiper = displayBlogSwiper.join('')
-    blogSwiper.innerHTML = displayBlogSwiper
-}
-displayBlogSwiper(blogSwiperData)
+// function displayBlogSwiper(blogSwiperItems) {
+//     let displayBlogSwiper = blogSwiperItems.map((item) => {
+//         return `
+//         <div class="blog__slide swiper-slide">
+//             <div class="swiper-blog__body">
+//                 <div class="swiper-blog__items">
+//                     <div class="swiper-blog__pictures blog-pictures">
+//                         <a href="" class="blog-pictures__desk">
+//                             <img
+//                                 src="${item.img[0]}"
+//                                 alt="Desk"
+//                             />
+//                             <div class="blog-pictures__loupe">
+//                                 <img
+//                                     src="${item.decor}"
+//                                     alt="Loupe"
+//                                 />
+//                             </div>
+//                         </a>
+//                         <a href="" class="blog-pictures__picnic">
+//                             <img
+//                                 src="${item.img[1]}"
+//                                 alt="Picnic"
+//                             />
+//                         </a>
+//                         <a href="" class="blog-pictures__callboard">
+//                             <img
+//                                 src="${item.img[2]}"
+//                                 alt="Call-board"
+//                             />
+//                         </a>
+//                     </div>
+//                     <div class="swiper-blog__content content-blog">
+//                         <div class="content-blog__title title">
+//                             ${item.title}
+//                         </div>
+//                         <div class="content-blog__text text">
+//                             ${item.text}
+//                         </div>
+//                         <div class="content-blog__links">
+//                             <a
+//                                 href="https://www.youtube.com/watch?v=G1IbRujko-A&t=3321s&ab_channel=10Hours"
+//                                 class="content-blog__read btn btn__blue"
+//                                 >${item.btns[0]}</a
+//                             >
+//                             <a href="https://www.youtube.com/watch?v=G1IbRujko-A&t=3321s&ab_channel=10Hours" class="content-blog__add"
+//                                 >${item.btns[1]}</a
+//                             >
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         `
+//     })
+//     displayBlogSwiper = displayBlogSwiper.join('')
+//     blogSwiper.innerHTML = displayBlogSwiper
+// }
+// displayBlogSwiper(blogSwiperData)
 //! </Blog Swiper>
 
 //! <Testimonials Swiper>

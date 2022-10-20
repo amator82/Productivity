@@ -5,6 +5,6 @@ flsFunctions.isWebp()
 flsFunctions.menuInit()
 
 import './modules/swipers_info.js'
-import './modules/swipers_func.js'
+import './modules/sliders.js'
 import './modules/fax.js'
 import './modules/count.js'

@@ -90,11 +90,7 @@ body {
 //! </Основная сетка>
 
 //! <Подключение блоков>
-@import './base/ui.scss';
-@import './base/swiper.scss';
-
-@import './base/common.scss';
-
+@import './common.scss';
 @import './blocks/footer.scss';
 @import './blocks/header.scss';
 //! </Подключение блоков>
