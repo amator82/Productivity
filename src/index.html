@@ -4,23 +4,161 @@
         @@include('html/base/preloader.html', {})
         <div class="wrapper">
             @@include('html/base/header.html', {})
-            <main class="page">
-                <section class="plan">
-                    <!-- Оболочка слайдера -->
-                    <div class="main__slider swiper">
-                        <!-- Двигающееся часть слайдера -->
-                        <div class="main__wrapper swiper-wrapper">
-                            <!-- Слайд -->
-                            <div class="main__slide swiper-slide"></div>
+            <main class="page page_home">
+                <section class="page_main-block main-block">
+                    <div class="main-block__slider swiper">
+                        <div class="main-block__wrapper swiper-wrapper">
+                            <div
+                                class="main-block__slide swiper-slide slide-main-block"
+                            >
+                                <div class="slide-main-block__container">
+                                    <div class="slide-main-block__content">
+                                        <div
+                                            class="slide-main-block__info info"
+                                        >
+                                            PLAN YOUR LIFE
+                                            <!-- ${item.info} -->
+                                        </div>
+                                        <h1
+                                            class="slide-main-block__title title"
+                                        >
+                                            Increase your
+                                            <span>productivity</span>
+                                            <!-- ${item.title} -->
+                                        </h1>
+                                        <div
+                                            class="slide-main-block__text text"
+                                        >
+                                            Brute laoreet efficiendi id his, ea
+                                            illum nonumes luptatum pro. Usu
+                                            atqui laudem an, insolens gubergren
+                                            similique est cu. Et vel modus
+                                            congue vituperata.
+                                            <!-- ${item.text} -->
+                                        </div>
+                                        <button
+                                            class="slide-main-block__button"
+                                        >
+                                            <img
+                                                src="../../img/plan/play.svg"
+                                                alt="btn"
+                                            />
+                                        </button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="slide-main-block__background slide-main-block__background-ibg"
+                                >
+                                    <img
+                                        src="../../img/plan/background.png"
+                                        alt="backgroungImage"
+                                    />
+                                </div>
+                            </div>
+                            <div
+                                class="main-block__slide swiper-slide slide-main-block"
+                            >
+                                <div class="slide-main-block__container">
+                                    <div class="slide-main-block__content">
+                                        <div
+                                            class="slide-main-block__info info"
+                                        >
+                                            PLAN YOUR LIFE
+                                            <!-- ${item.info} -->
+                                        </div>
+                                        <h1
+                                            class="slide-main-block__title title"
+                                        >
+                                            Increase your
+                                            <span>productivity</span>
+                                            <!-- ${item.title} -->
+                                        </h1>
+                                        <div
+                                            class="slide-main-block__text text"
+                                        >
+                                            Brute laoreet efficiendi id his, ea
+                                            illum nonumes luptatum pro. Usu
+                                            atqui laudem an, insolens gubergren
+                                            similique est cu. Et vel modus
+                                            congue vituperata.
+                                            <!-- ${item.text} -->
+                                        </div>
+                                        <button
+                                            class="slide-main-block__button"
+                                        >
+                                            <img
+                                                src="../../img/plan/play.svg"
+                                                alt="btn"
+                                            />
+                                        </button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="slide-main-block__background slide-main-block__background-ibg"
+                                >
+                                    <img
+                                        src="../../img/plan/background.png"
+                                        alt="backgroungImage"
+                                    />
+                                </div>
+                            </div>
+                            <div
+                                class="main-block__slide swiper-slide slide-main-block"
+                            >
+                                <div class="slide-main-block__container">
+                                    <div class="slide-main-block__content">
+                                        <div
+                                            class="slide-main-block__info info"
+                                        >
+                                            PLAN YOUR LIFE
+                                            <!-- ${item.info} -->
+                                        </div>
+                                        <h1
+                                            class="slide-main-block__title title"
+                                        >
+                                            Increase your
+                                            <span>productivity</span>
+                                            <!-- ${item.title} -->
+                                        </h1>
+                                        <div
+                                            class="slide-main-block__text text"
+                                        >
+                                            Brute laoreet efficiendi id his, ea
+                                            illum nonumes luptatum pro. Usu
+                                            atqui laudem an, insolens gubergren
+                                            similique est cu. Et vel modus
+                                            congue vituperata.
+                                            <!-- ${item.text} -->
+                                        </div>
+                                        <button
+                                            class="slide-main-block__button"
+                                        >
+                                            <img
+                                                src="../../img/plan/play.svg"
+                                                alt="btn"
+                                            />
+                                        </button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="slide-main-block__background slide-main-block__background-ibg"
+                                >
+                                    <img
+                                        src="../../img/plan/background.png"
+                                        alt="backgroungImage"
+                                    />
+                                </div>
+                            </div>
                         </div>
-                        <!-- Если нужна пагинация -->
-                        <div
-                            class="main__swiper-pagination swiper-pagination"
-                        ></div>
+                        <div class="main-block__controll controll-main-block">
+                            <div
+                                class="controll-main-block__dotts swiper-pagination"
+                            ></div>
+                        </div>
                     </div>
                 </section>
-                <section class="sponsors _container">
-                    <div class="sponsors__items">
+                <section class="page__sponsors sponsors">
+                    <div class="sponsors__container">
                         <div class="sponsors__item">
                             <img
                                 src="@img/sponsors/bitbucket.svg"

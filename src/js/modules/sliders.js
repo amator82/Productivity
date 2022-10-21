@@ -1,21 +1,21 @@
 import Swiper, { Navigation, Pagination, Parallax, Autoplay } from 'swiper'
 
 function initSliders() {
-    if (document.querySelector('.main__slider')) {
-        new Swiper('.main__slider', {
+    if (document.querySelector('.main-block__slider')) {
+        new Swiper('.main-block__slider', {
             modules: [Pagination, Parallax, Autoplay],
             observeParents: true,
             slidesPerView: 1,
             loop: true,
-            spaceBetween: 30,
+            spaceBetween: 20,
             speed: 800,
-            // parallax: true,
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false
-            // },
+            parallax: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
             pagination: {
-                el: '.main__swiper-pagination',
+                el: '.controll-main-block__dotts',
                 clickable: true
             },
             on: {}
@@ -42,7 +42,7 @@ function initSliders() {
             },
             pagination: {
                 el: '.controll-blog__dotts',
-                clickable: true,
+                clickable: true
             },
             on: {}
         })

@@ -1,70 +1,63 @@
-.plan {
-    position: relative;
-}
-.main {
-    &__swiper {
+.page {
+    &_main-block {
     }
-    &__slides {
+    &__sponsors {
     }
 }
-.main-slide {
-    position: relative;
-    height: auto;
-    text-align: center;
+.main-block {
+    @include adaptiveValue("padding-bottom", 60, 30);
+    &__container {
+    }
+    &__slider {
+    }
+    &__wrapper {
+        @include adaptiveValue('margin-bottom', 60, 30);
+    }
+    &__slide {
+    }
+    &__controll {
+    }
+}
+.slide-main-block {
     &__content {
-        padding: 90px 0px 210px 0px;
         position: relative;
         z-index: 2;
-        @media (max-width: $md3) {
-            padding: 70px 0px 170px 0px;
-        }
-        @media (max-width: $md4) {
-            padding: 50px 0px 130px 0px;
-        }
-    }
-    &__container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        @include adaptiveValue('padding-top', 90, 70);
+        @include adaptiveValue('padding-bottom', 210, 100);
     }
     &__info {
         &:not(:last-child) {
-            margin: 0px 0px 16px 0px;
-        }
-        @media (max-width: $md4) {
-            &:not(:last-child) {
-                margin: 0px 0px 10px 0px;
-            }
+            margin-bottom: rem(16);
         }
     }
     &__title {
         font-weight: 300;
-        font-size: 48px;
-        line-height: calc(55 / 48 * 100%);
-        @media (max-width: $md4) {
-            font-size: 40px;
+        @include adaptiveValue('font-size', 48, 34);
+        line-height: math.div(55, 48);
+        &:not(:last-child) {
+            @include adaptiveValue('margin-bottom', 25, 16);
         }
     }
     &__text {
         font-family: $roboto;
-        font-size: 15px;
-        line-height: calc(29 / 15 * 100%);
+        font-size: rem(15);
+        line-height: math.div(29, 15);
         letter-spacing: 0.03em;
         color: #8d96bd;
         max-width: 500px;
-        margin: 25px auto 0px auto;
-        @media (max-width: $md4) {
-            font-size: 13px;
-            max-width: 400px;
-            margin: 15px auto 0px auto;
+        &:not(:last-child) {
+            @include adaptiveValue('margin-bottom', 20, 16);
         }
     }
     &__button {
-        margin: 20px auto 0px auto;
-        width: 52px;
-        height: 52px;
+        width: rem(52);
+        height: rem(52);
         border-radius: 50%;
         background-color: #fff;
-        @media (max-width: $md4) {
-            margin: 10px auto 0px auto;
-        }
     }
     &__background {
         position: absolute;
@@ -72,34 +65,35 @@
         height: 100%;
         top: 0;
         left: 0;
-        @media (max-width: $md4) {
-            img {
-                object-position: 43%;
-            }
+    }
+    &__background-ibg {
+    }
+}
+.controll-main-block {
+    &__dotts {
+    }
+}
+//==================================================//
+
+.sponsors {
+    @include adaptiveValue('padding-top', 60, 30);
+    @include adaptiveValue('padding-bottom', 60, 30);
+    &__container {
+        max-width: 880px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__item {
+        img {
+            max-width: 100%;
         }
     }
 }
-.swiper-container {
-    margin: 0 auto;
-    width: 100%;
-}
-.main__swiper-pagination {
-    margin: 0px 0px 30px 0px;
-}
-//==================================================//
+
 .sponsors {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    @media (max-width: $md3) {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-    @media (max-width: $md4) {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-    &__container {
-    }
     &__items {
         max-width: 880px;
         margin: 0 auto;
@@ -116,11 +110,6 @@
             column-gap: 80px;
             justify-content: center;
             grid-template-columns: repeat(2, auto);
-        }
-    }
-    &__item {
-        img {
-            max-width: 100%;
         }
     }
 }
@@ -551,7 +540,6 @@
 }
 //==================================================//
 //!
-
 .blog {
     background-color: $bgc;
     @include adaptiveValue('padding-top', 100, 30);
@@ -722,7 +710,6 @@
         }
     }
 }
-
 //!
 //==================================================//
 .testimonials {
