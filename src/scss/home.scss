@@ -5,13 +5,11 @@
     }
 }
 .main-block {
-    @include adaptiveValue("padding-bottom", 60, 30);
     &__container {
     }
     &__slider {
     }
     &__wrapper {
-        @include adaptiveValue('margin-bottom', 60, 30);
     }
     &__slide {
     }
@@ -27,7 +25,7 @@
         text-align: center;
         align-items: center;
         @include adaptiveValue('padding-top', 90, 70);
-        @include adaptiveValue('padding-bottom', 210, 100);
+        @include adaptiveValue('padding-bottom', 210, 180);
     }
     &__info {
         &:not(:last-child) {
@@ -71,6 +69,9 @@
 }
 .controll-main-block {
     &__dotts {
+        &.swiper-pagination-bullets {
+            bottom: 30px;
+        }
     }
 }
 //==================================================//
