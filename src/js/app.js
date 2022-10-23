@@ -7,3 +7,4 @@ import './files/sliders.js'
 import'./files/script.js'
 
 import './files/libs/dynamic_adapt.js'
+import './files/libs/parallax-mouse.js'

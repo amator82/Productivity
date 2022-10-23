@@ -50,15 +50,15 @@ export function addTouchClass() {
     if (isMobile.any()) document.documentElement.classList.add('touch')
 }
 export function fullVHfix() {
-	const fullScreens = document.querySelectorAll('[data-fullscreen]');
-	if (fullScreens.length && isMobile.any()) {
-		window.addEventListener('resize', fixHeight);
-		function fixHeight() {
-			let vh = window.innerHeight * 0.01;
-			document.documentElement.style.setProperty('--vh', `${vh}px`);
-		}
-		fixHeight();
-	}
+    const fullScreens = document.querySelectorAll('[data-fullscreen]')
+    if (fullScreens.length && isMobile.any()) {
+        window.addEventListener('resize', fixHeight)
+        function fixHeight() {
+            let vh = window.innerHeight * 0.01
+            document.documentElement.style.setProperty('--vh', `${vh}px`)
+        }
+        fixHeight()
+    }
 }
 //! </Проверка мобильного браузера>
 
@@ -127,16 +127,9 @@ export function setHash(hash) {
 export function getHash() {
     if (location.hash) {
         return location.hash.replace('#', '')
-    }}
-//! </Добавление loaded для HTML после полной загрузки страницы>
-
-window.onload = function () {
-    document.body.classList.add('loaded__hiding')
-    window.setTimeout(function () {
-        document.body.classList.add('loaded')
-        document.body.classList.remove('loaded__hiding')
-    }, 500)
+    }
 }
+//! </Добавление loaded для HTML после полной загрузки страницы>
 
 //! <Вспомогательные модули плавного расскрытия и закрытия объекта>
 export let _slideUp = (target, duration = 500, showmore = 0) => {
@@ -233,27 +226,10 @@ export function menuInit() {
 }
 //!</Menu Burger>
 
-//!<Fixed navbar / scroll to top>
-const navbar = document.querySelector('.header')
-const topLink = document.querySelector('.top-link')
-
-window.addEventListener('scroll', () => {
-    const scrollHeight = window.pageYOffset
-    const navHeight = navbar.getBoundingClientRect().height
-
-    if (scrollHeight > navHeight) {
-        navbar.classList.add('fixed-nav')
-    } else {
-        navbar.classList.remove('fixed-nav')
-    }
-
-    if (scrollHeight > 500) {
-        topLink.classList.add('show-link')
-    } else {
-        topLink.classList.remove('show-link')
-    }
-})
-//!</Fixed navbar / scroll to top>
-
-const date = document.getElementById('date')
-date.innerHTML = new Date().getFullYear()
+export function FLS(message) {
+    setTimeout(() => {
+        if (window.FLS) {
+            console.log(message)
+        }
+    }, 0)
+}

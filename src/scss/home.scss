@@ -224,18 +224,20 @@
     @include adaptiveValue('padding-top', 160, 40);
     @include adaptiveValue('padding-bottom', 140, 40);
     border-top: 1px solid #d8e3fe;
+    position: relative;
     &__container {
-        position: relative;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
     &__info {
+        z-index: 2;
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 20, 15);
         }
     }
     &__title {
+        z-index: 2;
         font-size: rem(36);
         line-height: math.div(45, 36);
         &:not(:last-child) {
@@ -258,7 +260,7 @@
         display: grid;
         grid-template-columns: repeat(4, auto);
         row-gap: rem(40);
-        // column-gap: rem(20);
+        column-gap: rem(20);
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 90, 50);
         }
@@ -271,8 +273,11 @@
     }
     &__buttons {
     }
+    &__decor {
+    }
 }
 .column-about {
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -335,8 +340,7 @@
         line-height: math.div(19, 11);
         color: #adb3cb;
     }
-    &__line{
-        
+    &__line {
     }
 }
 .buttons-about {
@@ -345,8 +349,10 @@
     align-items: center;
     gap: rem(17);
     &__read {
+        z-index: 2;
     }
     &__text {
+        z-index: 2;
         @extend .column-about__text;
         display: flex;
         gap: rem(17);
@@ -363,8 +369,29 @@
         }
     }
     &__get {
+        z-index: 2;
     }
 }
+.decor-about {
+    &__items {
+    }
+    &__item {
+        position: absolute;
+        &_1 {
+            top: percent(141, 885);
+            left: percent(225, 1230);
+        }
+        &_2 {
+            top: percent(634, 885);
+            left: percent(126, 1230);
+        }
+        &_3 {
+            top: percent(203, 885);
+            right: percent(114, 1230);
+        }
+    }
+}
+
 .cloud {
     &__1 {
         position: absolute;
