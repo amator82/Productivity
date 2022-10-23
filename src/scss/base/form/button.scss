@@ -7,20 +7,12 @@
     font-weight: 700;
     font-size: rem(13);
     line-height: math.div(16, 13);
+    transition: all 0.3s ease 0s;
     &__blue {
         background-color: #d2e1ff;
         color: #3a79ff;
         &:hover {
             background-color: #dce5f9;
-        }
-    }
-    &__grey {
-        color: #adb4d2;
-        border: 1px solid #d1d1e4;
-        &:hover {
-            color: #fff;
-            background-color: #b1b5ca;
-            border: 1px solid #aeb3cb;
         }
     }
     &__pink {
@@ -29,6 +21,35 @@
         &:hover {
             color: #e33838;
             background-color: #fbc9c9;
+        }
+    }
+    &__dark-blue {
+        min-width: rem(130);
+        font-weight: 700;
+        line-height: math.div(16, 13);
+        font-size: rem(13);
+        color: #fff;
+        background-color: #4c85ff;
+        box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
+        @media (any-hover: hover){
+            &:hover{
+                background-color: #3170f7;
+                color: $bgc;
+                box-shadow: 0px 10px 20px rgba(188, 199, 255, 0.8);
+            }
+        }
+    }
+    &__grey {
+        min-width: rem(130);
+        color: #adb4d2;
+        border: 1px solid #d1d1e4;
+        padding: rem(12) rem(14);
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+                background-color: #d7dae8;
+                border: 1px solid #d7dae8;
+            }
         }
     }
 }

@@ -5,7 +5,7 @@
         <div class="wrapper">
             @@include('html/base/header.html', {})
             <main class="page page_home">
-                <section class="page_main-block main-block">
+                <section class="page__main-block main-block">
                     <div class="main-block__slider swiper">
                         <div class="main-block__wrapper swiper-wrapper">
                             <div
@@ -181,8 +181,8 @@
                         </div>
                     </div>
                 </section>
-                <section class="app">
-                    <div class="app__container _container">
+                <section class="page__app app">
+                    <div class="app__container">
                         <div class="app__body">
                             <div class="app__content content-app">
                                 <div class="content-app__info info">
@@ -200,44 +200,50 @@
                                     expetenda consequat.
                                 </div>
                                 <div class="content-app__buttons buttons-app">
-                                    <a
-                                        href="https://www.youtube.com/watch?v=G1IbRujko-A&t=3321s&ab_channel=10Hours"
-                                        class="button-blue"
+                                    <button
+                                        type="button"
+                                        class="buttons-app__blue btn btn__dark-blue"
                                     >
-                                        <div class="button-blue__text">
-                                            View video
-                                        </div>
+                                        View video
                                         <img
                                             src="@img/apps/play-video.svg"
                                             alt="Play-video"
                                         />
-                                    </a>
-                                    <a
-                                        href="https://www.youtube.com/watch?v=G1IbRujko-A&t=3321s&ab_channel=10Hours"
-                                        class="button-grey btn btn__grey"
+                                    </button>
+                                    <button
+                                        class="buttons-app__grey btn btn__grey"
                                     >
-                                        <div class="button-grey__text">
-                                            See features
-                                        </div>
-                                    </a>
+                                        See features
+                                    </button>
                                 </div>
                             </div>
-                            <div class="app__images">
-                                <img
-                                    src="@img/apps/reminder.jpg"
-                                    class="image__reminder _ibg"
-                                    alt="Reminder"
-                                />
-                                <img
-                                    src="@img/apps/desktop.jpg"
-                                    class="image__desktop _ibg"
-                                    alt="Desktop"
-                                />
-                                <img
-                                    src="@img/apps/event.jpg"
-                                    class="image__event _ibg"
-                                    alt="Event"
-                                />
+                            <div class="app__images images-app">
+                                <div class="images-app__items">
+                                    <div
+                                        class="images-app__item images-app__item_01"
+                                    >
+                                        <img
+                                            src="@img/apps/desktop.jpg"
+                                            alt="Desktop"
+                                        />
+                                    </div>
+                                    <div
+                                        class="images-app__item images-app__item_02"
+                                    >
+                                        <img
+                                            src="@img/apps/reminder.jpg"
+                                            alt="Reminder"
+                                        />
+                                    </div>
+                                    <div
+                                        class="images-app__item images-app__item_03"
+                                    >
+                                        <img
+                                            src="@img/apps/event.jpg"
+                                            alt="Event"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

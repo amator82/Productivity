@@ -1,7 +1,9 @@
 .page {
-    &_main-block {
+    &__main-block {
     }
     &__brands {
+    }
+    &__app {
     }
 }
 .main-block {
@@ -82,20 +84,15 @@
     }
     &__items {
         margin: 0 auto;
+        text-align: center;
         max-width: rem(890);
-        display: grid;
-        grid-template-columns: repeat(5, auto);
-        column-gap: rem(10);
-        row-gap: rem(20);
-        align-items: center;
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+        gap: rem(25);
+        flex-wrap: wrap;
         @media (max-width: $mobile) {
-            grid-template-columns: repeat(3, auto);
-        }
-        @media (max-width:$mobileSmall){
-            grid-template-columns: repeat(2, auto);
             justify-content: center;
-            column-gap: rem(40);
         }
     }
     &__item {
@@ -106,176 +103,121 @@
 }
 //==================================================//
 .app {
-    border-top: 1px solid #d8e3fe;
+    overflow: hidden;
     position: relative;
-    padding: 170px 0px;
+    @include adaptiveValue('padding-top', 100, 30);
+    @include adaptiveValue('padding-bottom', 170, 60);
+    border-top: 1px solid #d8e3fe;
     background-color: $bgc;
-    @media (max-width: $md3) {
-        padding: 70px 0px;
-    }
-    @media (max-width: $md4) {
-        padding: 30px 0;
-    }
     &__container {
+        position: relative;
     }
     &__body {
         display: flex;
+        column-gap: rem(100);
+        row-gap: rem(20);
         justify-content: space-between;
+        @media (max-width: em(970)) {
+            align-items: center;
+            flex-direction: column;
+        }
     }
     &__content {
-        max-width: 410px;
-        @media (max-width: $md3) {
-            max-width: 330px;
-        }
-        @media (max-width: 610px) {
-            max-width: 270px;
-        }
     }
     &__images {
-        margin: 0px 0px 0px 55px;
-        position: relative;
-        // width: 100%;
-        height: 100%;
-        @media (max-width: $md3) {
-            margin: 0px 0px 0px 30px;
-        }
-        @media (max-width: $md4) {
-            margin: 0px 0px 0px 10px;
-        }
-    }
-}
-.image {
-    &__reminder {
-        border-radius: 15px;
-        position: absolute;
-        z-index: 2;
-        bottom: 30;
-        @media (max-width: $md3) {
-            position: relative;
-            bottom: 0;
-        }
-    }
-    &__desktop {
-        position: relative;
-        z-index: 1;
-        top: 0;
-        left: 70;
-        @media (max-width: $md3) {
-            display: none;
-        }
-    }
-    &__event {
-        border-radius: 15px;
-        position: absolute;
-        z-index: 2;
-        bottom: -50;
-        right: -25;
-        @media (max-width: $md3) {
-            bottom: 0;
-            top: 30;
-            left: -145;
-        }
-        @media (max-width: $md4) {
-            display: none;
-        }
     }
 }
 .content-app {
+    align-self: start;
+    @media (min-width: $mobile) {
+        max-width: rem(410);
+    }
     &__info {
-        margin-top: 30px;
+        margin-top: rem(30);
         &:not(:last-child) {
-            margin-bottom: 25px;
+            @include adaptiveValue('margin-bottom', 25, 15);
         }
-        @media (max-width: $md3) {
-            &:not(:last-child) {
-                margin-bottom: 15px;
-            }
+        @media (max-width: $mobile) {
+            text-align: center;
         }
     }
     &__title {
-        font-size: 36px;
-        line-height: calc(45 / 36 * 100%);
+        font-size: rem(36);
+        line-height: math.div(45, 36);
         &:not(:last-child) {
-            margin: 0px 0px 25px 0px;
-        }
-        @media (max-width: $md3) {
-            font-size: 33px;
-            &:not(:last-child) {
-                margin: 0px 0px 15px 0px;
-            }
-        }
-        @media (max-width: $md4) {
-            margin: 0px 0px 10px 0px;
+            @include adaptiveValue('margin-bottom', 25, 15);
         }
     }
     &__text {
         &:not(:last-child) {
-            margin: 0px 0px 45px 0px;
-        }
-        @media (max-width: $md3) {
-            &:not(:last-child) {
-                margin: 0px 0px 30px 0px;
-            }
-        }
-        @media (max-width: $md4) {
-            &:not(:last-child) {
-                margin: 0px 0px 15px 0px;
-            }
+            @include adaptiveValue('margin-bottom', 45, 20);
         }
     }
     &__buttons {
     }
 }
 .buttons-app {
-    align-items: center;
-    text-align: center;
     display: flex;
-}
-.button-blue {
-    transition: all 0.3s ease 0s;
-    justify-content: center;
-    padding: 13px 15px;
-    flex: 0 0 130px;
-    border: 1px solid #4c85ff;
-    border-radius: 2px 0px 0px 2px;
-    display: flex;
-    background-color: #4c85ff;
-    box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
-    &:hover {
-        background-color: #3c79fd;
-    }
-    @media (max-width: $md4) {
-        flex: 0 0 120px;
-    }
-    @media (min-width: $md3) {
-        &:hover {
-            background-color: #6694f6;
-            border: 1px solid #6694f6;
+    &__blue {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        @media (max-width: $mobileSmall) {
+            flex: 0 0 50%;
         }
     }
-    &__text {
-        font-weight: 700;
-        font-size: 13px;
-        line-height: calc(16 / 13 * 100%);
-        color: #fff;
-        margin: 0px 7px 0px 0px;
-        @media (max-width: $md4) {
-            font-weight: 500;
+    &__grey {
+        @media (max-width: $mobileSmall) {
+            flex: 0 0 50%;
         }
     }
 }
-.button-grey {
-    flex: 0 0 130px;
-    border-radius: 0px 2px 2px 0px;
-    @media (max-width: $md4) {
-        flex: 0 0 120px;
+.images-app {
+    &__items {
+        position: relative;
     }
-    &__text {
-        font-weight: 700;
-        font-size: 13px;
-        line-height: calc(16 / 13 * 100%);
-        @media (max-width: $md4) {
-            font-weight: 500;
+    &__item {
+        img {
+            box-shadow: 0px 20px 40px rgba(53, 60, 115, 0.15);
+            border-radius: 15px;
+        }
+        &_01 {
+            position: relative;
+            top: 0;
+            right: 0;
+            @media (max-width: $mobile) {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        &_02 {
+            position: absolute;
+            top: percent(100, 336);
+            right: percent(513, 540);
+            @media (max-width: $mobile) {
+                bottom: percent(-37, 540);
+                right: percent(394, 540);
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        &_03 {
+            position: absolute;
+            top: percent(156, 336);
+            right: percent(32, 540);
+            img {
+                height: 100%;
+            }
+            @media (max-width: $mobile) {
+                bottom: percent(-60, 540);
+                right: percent(16, 540);
+                img {
+                    height: 100%;
+                }
+            }
         }
     }
 }
