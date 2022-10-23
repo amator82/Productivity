@@ -3,3 +3,36 @@
 @import './base/swiper.scss';
 @import './base/preloader.scss';
 @import './base/ui.scss';
+
+@import './base/form/forms.scss';
+
+.info {
+    font-family: $roboto;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: calc(12 / 10 * 100%);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $darkblue;
+}
+.text {
+    font-family: $roboto;
+    font-size: 15px;
+    line-height: calc(29 / 15 * 100%);
+    letter-spacing: 0.03em;
+    color: #8d96bd;
+    @media (max-width: $md4) {
+        font-size: 13px;
+    }
+}
+.title {
+    color: $darkblue;
+    span {
+        font-weight: 500;
+    }
+}
+.line {
+    height: 1px;
+    width: 15px;
+    background-color: #dae4fe;
+}

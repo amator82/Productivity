@@ -1,0 +1,34 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: rem(113);
+    padding: rem(13) rem(15);
+    font-weight: 700;
+    font-size: rem(13);
+    line-height: math.div(16, 13);
+    &__blue {
+        background-color: #d2e1ff;
+        color: #3a79ff;
+        &:hover {
+            background-color: #dce5f9;
+        }
+    }
+    &__grey {
+        color: #adb4d2;
+        border: 1px solid #d1d1e4;
+        &:hover {
+            color: #fff;
+            background-color: #b1b5ca;
+            border: 1px solid #aeb3cb;
+        }
+    }
+    &__pink {
+        color: #d43f3f;
+        background-color: #ffd7d7;
+        &:hover {
+            color: #e33838;
+            background-color: #fbc9c9;
+        }
+    }
+}
