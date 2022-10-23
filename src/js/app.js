@@ -1,10 +1,9 @@
-import * as flsFunctions from './modules/functions.js'
+import * as mtrFunctions from './files/functions.js'
 
-flsFunctions.isWebp()
-//! Подключение меню бургер
-flsFunctions.menuInit()
+mtrFunctions.isWebp()
+mtrFunctions.menuInit()
 
-import './modules/swipers_info.js'
-import './modules/sliders.js'
-import './modules/fax.js'
-import './modules/count.js'
+import './files/sliders.js'
+import'./files/script.js'
+
+import './files/libs/dynamic_adapt.js'
