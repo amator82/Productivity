@@ -8,13 +8,13 @@
 }
 //!==================================================//
 .main-block {
-    &__container {
-    }
     &__slider {
+        position: relative;
     }
     &__wrapper {
     }
     &__slide {
+        overflow: hidden;
     }
     &__controll {
     }
@@ -69,6 +69,8 @@
     }
     &__background-ibg {
     }
+    &__decor {
+    }
 }
 .controll-main-block {
     &__dotts {
@@ -77,6 +79,69 @@
         }
     }
 }
+.decor-main-block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    &__item {
+        position: absolute;
+        &_1 {
+            top: percent(175, 570);
+            left: rem(-75);
+        }
+        &_2 {
+            top: percent(92, 570);
+            left: percent(253, 1440);
+        }
+        &_3 {
+            top: percent(386, 570);
+            left: percent(307, 1440);
+        }
+        &_4 {
+            top: percent(398, 570);
+            left: percent(253, 1440);
+        }
+        &_5 {
+            top: percent(396, 570);
+            left: percent(261, 1440);
+        }
+        &_6 {
+            top: percent(404, 570);
+            left: percent(294, 1440);
+        }
+        &_7 {
+            top: percent(38, 570);
+            right: percent(201, 1440);
+        }
+        &_8 {
+            top: percent(53, 570);
+            right: percent(138, 1440);
+        }
+        &_9 {
+            top: percent(86, 570);
+            right: percent(138, 1440);
+        }
+        &_10 {
+            bottom: percent(81, 570);
+            right: percent(234, 1440);
+        }
+        &_11 {
+            bottom: percent(39, 570);
+            right: percent(258, 1440);
+        }
+        &_12 {
+            bottom: percent(41, 570);
+            right: percent(201, 1440);
+        }
+        &_13 {
+            bottom: percent(108, 570);
+            right: rem(-55);
+        }
+    }
+}
+
 //!==================================================//
 .brands {
     @include adaptiveValue('padding-top', 60, 30);

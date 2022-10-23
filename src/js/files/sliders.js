@@ -10,10 +10,10 @@ function initSliders() {
             spaceBetween: 20,
             speed: 800,
             parallax: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false
-            },
+            // autoplay: {
+            //     delay: 3000,
+            //     disableOnInteraction: false
+            // },
             pagination: {
                 el: '.controll-main-block__dotts',
                 clickable: true
