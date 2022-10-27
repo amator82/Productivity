@@ -15,6 +15,8 @@
     }
     &__getstarted {
     }
+    &__newsletter {
+    }
 }
 
 //!==================================================//
@@ -753,7 +755,7 @@
     &__slider {
     }
     &__wrapper {
-        max-width: rem(420);
+        max-width: rem(700);
         @include adaptiveValue('margin-bottom', 90, 60);
     }
     &__slide {
@@ -792,8 +794,8 @@
 .slide-testimonials {
     &__card {
         position: relative;
-        @include adaptiveValue('padding-top', 45, 25);
-        @include adaptiveValue('padding-bottom', 45, 25);
+        @include adaptiveValue('padding-top', 45, 30);
+        @include adaptiveValue('padding-bottom', 45, 30);
         @include adaptiveValue('padding-right', 70, 30);
         @include adaptiveValue('padding-left', 70, 30);
         background-color: #fff;
@@ -1062,115 +1064,44 @@
 
 //!==================================================//
 .newsletter {
-    padding: 120px 0;
     border-top: 1px solid #d8e3fe;
-    @media (max-width: $md3) {
-        padding: 90px 0;
-    }
-    @media (max-width: $md4) {
-        padding: 50px 0;
-    }
+    @include adaptiveValue('padding-top', 120, 40);
+    @include adaptiveValue('padding-bottom', 120, 40);
     &__container {
-        max-width: 958px;
-        padding: 0 35px;
-        margin: 0 auto;
     }
     &__body {
-        align-items: center;
         display: flex;
-        @media (max-width: $md3) {
-            align-items: stretch;
+        row-gap: rem(20);
+        @include adaptiveValue('column-gap', 80, 0);
+        @media (min-width: $mobile) {
+            align-items: center;
+            justify-content: center;
         }
-        @media (max-width: $md4) {
-            flex-wrap: wrap;
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
         }
     }
     &__content {
-        @media (max-width: $md2) {
-            margin: 0px 0px 20px 0px;
-        }
     }
-    &__buttons {
-        justify-content: flex-end;
-        margin: 0px 0px 0px 10px;
-        @media (max-width: $md3) {
-            justify-content: flex-start;
-        }
-        @media (max-width: $md4) {
-            margin: 0;
-        }
-    }
-}
-.content-newsletter {
     &__title {
         font-weight: 700;
-        font-size: 18px;
-        line-height: calc(22 / 18 * 100%);
+        font-size: rem(18);
+        line-height: math.div(22, 18);
         color: $darkblue;
-        margin: 0px 0px 20px 0px;
+        &:not(:last-child) {
+            margin-bottom: em(20, 18);
+        }
     }
     &__text {
-        max-width: 330px;
-        font-family: $roboto;
-        line-height: calc(27 / 14 * 100%);
-        letter-spacing: 0.03em;
+        max-width: rem(330);
+        line-height: math.div(27, 14);
         color: #8d96bd;
     }
-}
-.button-newsletter {
-    display: flex;
-    width: 100%;
-    @media (max-width: $md3) {
-        flex-direction: column;
-    }
-    @media (max-width: $md4) {
-        flex-direction: row;
-    }
-    &__email {
-        width: 280px;
-        height: 60px;
-        font-weight: 700;
-        font-size: 13px;
-        line-height: 16px;
-        color: #7a85ad;
-        background: #efeff7;
-        border-radius: 5px;
-        padding: 0px 0px 0px 20px;
-        @media (max-width: $md3) {
-            width: 90%;
-        }
-        @media (max-width: $md4) {
-            width: 70%;
-        }
-    }
-    &__save {
-        margin: 0px 0px 0px 15px;
-        flex: 0 0 130px;
-        transition: all 0.3s ease 0s;
-        max-height: 60px;
-        background: #4d6ce1;
-        box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
-        border-radius: 5px;
-        cursor: pointer;
-        &:hover {
-            transform: scale(1.05);
-        }
-        @media (max-width: $md3) {
-            margin: 10px 0px 0px 0px;
-            justify-content: right;
-            width: 50%;
-        }
-        @media (max-width: $md4) {
-            padding: 0;
-            margin: 0 0 0 10px;
-            width: 30%;
-        }
-        span {
-            font-weight: 700;
-            font-size: 13px;
-            line-height: 16px;
-            color: #ffffff;
+    &__form {
+        @media (max-width: em(570)) {
+            width: 100%;
         }
     }
 }
+
 //!==================================================//

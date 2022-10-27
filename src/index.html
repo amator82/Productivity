@@ -1667,36 +1667,34 @@
                         </div>
                     </div>
                 </section>
-                <section class="newsletter">
+                <section class="page__newsletter newsletter">
                     <div class="newsletter__container">
                         <div class="newsletter__body">
-                            <div class="newsletter__content content-newsletter">
-                                <div class="content-newsletter__title">
+                            <div class="newsletter__content">
+                                <div class="newsletter__title">
                                     Sign up for newsletter
                                 </div>
-                                <div class="content-newsletter__text">
-                                    <p>
-                                        Cu qui soleat partiendo urbanitas. Eum
-                                        aperiri indoctum eu, homero alterum.
-                                    </p>
+                                <div class="newsletter__text text">
+                                    Cu qui soleat partiendo urbanitas. Eum
+                                    aperiri indoctum eu, homero alterum.
                                 </div>
                             </div>
-                            <form
-                                action="../index.html"
-                                class="newsletter__buttons button-newsletter"
-                            >
-                                <input
-                                    class="button-newsletter__email"
-                                    type="email"
-                                    placeholder="Email address"
-                                />
-                                <button
-                                    class="button-newsletter__save"
-                                    type="submit"
-                                >
-                                    <span>Save me</span>
-                                </button>
-                            </form>
+                            <div class="newsletter__form">
+                                <form action="#" class="form">
+                                    <input
+                                        data-required="email"
+                                        autocomplete="off"
+                                        type="text"
+                                        name="form[]"
+                                        data-error="Wrong email"
+                                        placeholder="Email address"
+                                        class="form__input"
+                                    />
+                                    <button type="submit" class="form__button btn">
+                                        Save me
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </section>

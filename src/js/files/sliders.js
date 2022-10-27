@@ -73,10 +73,9 @@ function initSliders() {
                     spaceBetween: 30
                 },
                 767: {
-                    slidesPerView: 1.2,
                     spaceBetween: 40
                 },
-                992: {
+                1440: {
                     slidesPerView: 1.5,
                     spaceBetween: 65
                 }
