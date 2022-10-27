@@ -2,6 +2,7 @@ import * as mtrFunctions from './files/functions.js'
 
 mtrFunctions.isWebp()
 mtrFunctions.menuInit()
+mtrFunctions.spollers()
 
 import './files/sliders.js'
 import'./files/script.js'

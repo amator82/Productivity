@@ -55,32 +55,32 @@ const faxData = [
 
 const dropdownMenu = document.querySelector('.help__dropdown-menu')
 
-function displayFaxItems(faxItems) {
-    let displayFax = faxItems.map((item) => {
-        return `
-        <li class="menu-dropdown__link">
-            <div class="menu-dropdown__preview" data-prev="prev">
-                <div class="menu-dropdown__arrow"></div>
-                <div class="menu-dropdown__title">
-                    ${item.title}
-                </div>
-            </div>
-            <div class="menu-dropdown__content">
-                <div class="menu-dropdown__text">
-                    <p>
-                        ${item.desc}
-                    </p>
-                </div>
-                <a href="https://www.youtube.com/watch?v=G1IbRujko-A&t=3321s&ab_channel=10Hours" class="menu-dropdown__button">
-                    ${item.btnText}
-                </a>
-            </div>
-        </li>
-        `
-    })
-    displayFax = displayFax.join('')
-    dropdownMenu.innerHTML = displayFax
-}
+// function displayFaxItems(faxItems) {
+//     let displayFax = faxItems.map((item) => {
+//         return `
+//         <li class="menu-dropdown__link">
+//             <div class="menu-dropdown__preview" data-prev="prev">
+//                 <div class="menu-dropdown__arrow"></div>
+//                 <div class="menu-dropdown__title">
+//                     ${item.title}
+//                 </div>
+//             </div>
+//             <div class="menu-dropdown__content">
+//                 <div class="menu-dropdown__text">
+//                     <p>
+//                         ${item.desc}
+//                     </p>
+//                 </div>
+//                 <a href="https://www.youtube.com/watch?v=G1IbRujko-A&t=3321s&ab_channel=10Hours" class="menu-dropdown__button">
+//                     ${item.btnText}
+//                 </a>
+//             </div>
+//         </li>
+//         `
+//     })
+//     displayFax = displayFax.join('')
+//     dropdownMenu.innerHTML = displayFax
+// }
 
 function dropDown() {
     const link = document.querySelectorAll('.menu-dropdown__link')
@@ -106,7 +106,7 @@ function dropDown() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    displayFaxItems(faxData)
+    // displayFaxItems(faxData)
     dropDown()
 })
 

@@ -3,6 +3,7 @@
 @import './base/swiper.scss';
 @import './base/preloader.scss';
 @import './base/ui.scss';
+@import './base/spollers.scss';
 
 @import './base/form/forms.scss';
 
@@ -18,7 +19,7 @@
 .text {
     font-family: $roboto;
     font-size: rem(15);
-    line-height: math.div(29 , 15);
+    line-height: math.div(29, 15);
     letter-spacing: 0.03em;
     color: #8d96bd;
     // @include adaptiveValue("font-size", 15, 13);
