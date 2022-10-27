@@ -9,6 +9,8 @@
     }
     &__blog {
     }
+    &__testimonials {
+    }
 }
 
 //!==================================================//
@@ -726,117 +728,99 @@
 
 //!==================================================//
 .testimonials {
+    @include adaptiveValue('padding-top', 100, 30);
+    @include adaptiveValue('padding-bottom', 100, 30);
+    background: linear-gradient(180deg, #eaf0ff 0%, #f6f9ff 100%);
     border-top: 1px solid #d8e3fe;
-    padding-top: 100px;
-    padding-bottom: 150px;
-    position: relative;
-    &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: transparent;
-        background: linear-gradient(180deg, #eaf0ff 0%, #f6f9ff 100%);
-    }
-    @media (max-width: $md3) {
-        padding-top: 50px;
-        padding-bottom: 70px;
-    }
     &__container {
-        max-width: 960px;
-        padding: 0 35px 0 35px;
     }
     &__body {
         display: flex;
-        @media (max-width: $md4) {
-            flex-direction: column;
+        row-gap: rem(20);
+        @include adaptiveValue('column-gap', 130, 30);
+        @media (max-width: em(620)) {
+            flex-wrap: wrap;
         }
     }
     &__content {
-        z-index: 20;
-        flex: 1 1 auto;
+        @media (min-width: $mobile) {
+            @include adaptiveValue('margin-left', 160, 30);
+        }
     }
-    &__swiper {
-        padding-left: 20px;
-        width: 430px;
-        z-index: 20;
-        @media (max-width: $md3) {
-            width: 350px;
-        }
-        @media (max-width: $md4) {
-            width: 100%;
-            padding: 0;
-        }
+    &__slider {
+    }
+    &__wrapper {
+        max-width: rem(420);
+        @include adaptiveValue('margin-bottom', 90, 60);
+    }
+    &__slide {
+    }
+    &__controll {
     }
 }
 .content-testimonials {
-    max-width: 340px;
-    margin: 20px 0px 0px 0px;
-    @media (max-width: $md4) {
-        margin: 0;
-    }
+    align-self: start;
+    position: relative;
+    display: grid;
+    @include adaptiveValue('margin-top', 20, 0);
     &__info {
-        margin: 0px 0px 30px 0px;
-        @media (max-width: $md3) {
-            margin-bottom: 15px;
+        &:not(:last-child) {
+            @include adaptiveValue('margin-bottom', 30, 10);
         }
     }
     &__title {
         font-weight: 500;
-        font-size: 36px;
-        line-height: calc(45 / 36 * 100%);
-        margin: 0px 0px 15px 0px;
-        @media (max-width: $md3) {
-            font-size: 33px;
+        @include adaptiveValue('font-size', 36, 30);
+        line-height: math.div(45, 36);
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+        @media (min-width: $tablet) {
+            white-space: nowrap;
         }
     }
     &__text {
-        p {
-            &:not(:last-child) {
-                margin-bottom: 15px;
-            }
+        max-width: rem(340);
+        &:not(:last-child) {
+            margin-bottom: rem(15);
         }
     }
 }
-.swiper-testimonials {
+.slide-testimonials {
     &__card {
-        height: max-content;
-        width: 100%;
         position: relative;
+        @include adaptiveValue('padding-top', 45, 25);
+        @include adaptiveValue('padding-bottom', 45, 25);
+        @include adaptiveValue('padding-right', 70, 30);
+        @include adaptiveValue('padding-left', 70, 30);
         background-color: #fff;
         border: 1px solid #d8e3fe;
         box-shadow: 0px 5px 50px #f3f5fa;
-        @media (max-width: $md4) {
-            margin: 20px 0px 0px 0px;
-        }
+        align-items: start;
     }
     &__text {
-        padding: 45px 70px;
-        margin: 0 auto;
-        color: #676f95;
-        line-height: calc(24 / 14 * 100%);
-        letter-spacing: 0.03em;
-        p {
-            &:not(:last-child) {
-                margin-bottom: 15px;
-            }
+        @media (min-width: $mobile) {
+            max-width: rem(320);
         }
-        @media (max-width: $md3) {
-            padding: 50px 40px;
+        line-height: math.div(24, 14);
+        letter-spacing: 0.03em;
+        color: #676f95;
+    }
+    &__photo {
+        transform: translate(0, 50%);
+        bottom: 0;
+        left: percent(180, 420);
+        position: absolute;
+        z-index: 2;
+        img {
+            border-radius: 50%;
+            width: rem(62);
+            height: rem(62);
         }
     }
-    &__avatar {
-        position: absolute;
-        overflow: hidden;
-        bottom: -25px;
-        left: 40%;
-        border-radius: 50%;
-        img {
-            width: 62px;
-            height: 62px;
-        }
+}
+.controll-testimonials {
+    &__dotts {
     }
 }
 //!==================================================//

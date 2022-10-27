@@ -10,10 +10,10 @@ function initSliders() {
             spaceBetween: 20,
             speed: 800,
             parallax: true,
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false
-            // },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: '.controll-main-block__dotts',
                 clickable: true
@@ -43,6 +43,43 @@ function initSliders() {
             pagination: {
                 el: '.controll-blog__dotts',
                 clickable: true
+            },
+            on: {}
+        })
+    }
+
+    if (document.querySelector('.testimonials__slider')) {
+        new Swiper('.testimonials__slider', {
+            modules: [Pagination, Parallax, Autoplay],
+            observeParents: true,
+            loop: true,
+            watchOverflow: true,
+            speed: 800,
+            parallax: true,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.controll-testimonials__dotts',
+                clickable: true
+            },
+            breakpoints: {
+                320: {
+                    spaceBetween: 20
+                },
+                480: {
+                    slidesPerView: 1,
+                    spaceBetween: 30
+                },
+                767: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 40
+                },
+                992: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 65
+                }
             },
             on: {}
         })

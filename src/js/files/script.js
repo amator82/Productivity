@@ -452,24 +452,24 @@ const testimonialsSwiperData = [
     }
 ]
 
-const testimonialsSwiper = document.getElementById('testimonials-swiper')
+// const testimonialsSwiper = document.getElementById('testimonials-swiper')
 
-function displayTestimonialsSwiper(testimonialsSwiperItems) {
-    let displayTestimonialsSwiper = testimonialsSwiperItems.map((item) => {
-        return `
-        <div class="swiper-testimonials__card swiper-slide">
-            <div class="swiper-testimonials__text">
-                ${item.text}
-            </div>
-            <div class="swiper-testimonials__avatar">
-                <img src="${item.img}" alt="Bill" />
-            </div>
-        </div>
-        `
-    })
-    displayTestimonialsSwiper = displayTestimonialsSwiper.join('')
-    testimonialsSwiper.innerHTML = displayTestimonialsSwiper
-}
+// function displayTestimonialsSwiper(testimonialsSwiperItems) {
+//     let displayTestimonialsSwiper = testimonialsSwiperItems.map((item) => {
+//         return `
+//         <div class="swiper-testimonials__card swiper-slide">
+//             <div class="swiper-testimonials__text">
+//                 ${item.text}
+//             </div>
+//             <div class="swiper-testimonials__avatar">
+//                 <img src="${item.img}" alt="Bill" />
+//             </div>
+//         </div>
+//         `
+//     })
+//     displayTestimonialsSwiper = displayTestimonialsSwiper.join('')
+//     testimonialsSwiper.innerHTML = displayTestimonialsSwiper
+// }
 
-displayTestimonialsSwiper(testimonialsSwiperData)
+// displayTestimonialsSwiper(testimonialsSwiperData)
 //! </Testimonials Swiper>
