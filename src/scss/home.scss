@@ -346,7 +346,7 @@
             @include adaptiveValue('margin-bottom', 90, 50);
         }
         @media (max-width: em(650)) {
-            gap: rem(40);
+            gap: rem(30);
             grid-template-columns: repeat(2, auto);
         }
     }
@@ -376,7 +376,7 @@
         }
     }
     @media (max-width: em(650)) {
-        gap: rem(40);
+        gap: rem(30);
         &:nth-child(odd) {
             &::after {
                 content: '';
@@ -436,7 +436,7 @@
         z-index: 2;
         @extend .column-about__text;
         display: flex;
-        gap: rem(17);
+        @include adaptiveValue("gap", 17, 10);
         align-items: center;
         justify-content: center;
         &::before,
@@ -483,7 +483,6 @@
     }
     &__items {
         display: flex;
-        align-items: center;
         justify-content: center;
     }
 }
