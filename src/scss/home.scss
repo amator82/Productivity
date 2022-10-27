@@ -13,6 +13,8 @@
     }
     &__help {
     }
+    &__getstarted {
+    }
 }
 
 //!==================================================//
@@ -827,107 +829,6 @@
 //!==================================================//
 
 //!==================================================//
-
-.menu-dropdown {
-    &__arrow {
-        position: relative;
-        width: 22px;
-        height: 22px;
-        border: 2px solid transparent;
-        border-radius: 100px;
-        &::after {
-            content: '';
-            position: absolute;
-            transition: all 0.3s ease 0s;
-            width: 10px;
-            height: 10px;
-            border-bottom: 2px solid #8e96b7;
-            border-right: 2px solid #8e96b7;
-            transform: rotate(45deg);
-            left: 4px;
-            top: 2px;
-        }
-        &._active {
-            &::after {
-                transition: all 0.3s ease 0s;
-                transform: rotate(225deg);
-            }
-        }
-    }
-    &__title {
-        &:not(:first-child) {
-            margin-left: 25px;
-        }
-        transition: color 0.3s ease 0s;
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 19px;
-        letter-spacing: 0.03em;
-        color: #8e96b7;
-        text-align: left;
-        &._active {
-            font-weight: 700;
-            font-size: 15px;
-            line-height: 19px;
-            letter-spacing: 0.03em;
-            color: #495274;
-        }
-    }
-    &__content {
-        animation: growDown 400ms ease-in-out forwards;
-        transform-origin: top center;
-        padding: 15px 20px;
-        display: none;
-        align-items: center;
-        justify-content: flex-end;
-        @keyframes growDown {
-            0% {
-                transform: scaleY(0);
-            }
-            80% {
-                transform: scaleY(1.1);
-            }
-            100% {
-                transform: scaleY(1);
-            }
-        }
-        &._active {
-            display: flex;
-            gap: 60px;
-            @media (max-width: $md4) {
-                gap: 15px;
-            }
-        }
-    }
-    &__text {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 27px;
-        letter-spacing: 0.03em;
-        max-width: 410px;
-        line-height: calc(27 / 14 * 100%);
-        letter-spacing: 0.03em;
-        color: #8d96bd;
-    }
-    &__button {
-        flex: 0 0 160px;
-        transition: background-color 0.3s ease 0s;
-        display: inline-flex;
-        text-align: center;
-        justify-content: center;
-        background-color: #e8ecf4;
-        border-radius: 2px;
-        padding: 15px;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: calc(16 / 13 * 100%);
-        color: #7382a3;
-        &:hover {
-            background-color: #d1d6dd;
-        }
-    }
-}
-
 .help {
     border-top: 1px solid #d8e3fe;
     @include adaptiveValue('padding-top', 160, 40);
@@ -1036,21 +937,6 @@
 
 //!==================================================//
 .getstarted {
-    border-top: 1px solid #d8e3fe;
-    padding: 90px 0;
-    position: relative;
-    @media (max-width: $md3) {
-        padding: 50px 0;
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: linear-gradient(229.32deg, #6888ff 12.77%, #5e80ff 73.11%);
-    }
     &__container {
         margin: 0 auto;
         text-align: center;
@@ -1071,33 +957,6 @@
         z-index: 20;
     }
     &__background {
-    }
-}
-.content-getstarted {
-    &__info {
-        color: #fff;
-        margin: 0px 0px 15px 0px;
-    }
-    &__title {
-        font-weight: 300;
-        font-size: 48px;
-        line-height: calc(60 / 48 * 100%);
-        color: #fff;
-        margin: 0px 0px 25px 0px;
-        span {
-            font-weight: 400;
-        }
-    }
-    &__text {
-        margin: 0 auto;
-        max-width: 710px;
-        display: block;
-        color: #fff;
-        p {
-            &:not(:last-child) {
-                margin-bottom: 10px;
-            }
-        }
     }
 }
 .button-getstarted {
@@ -1164,6 +1023,92 @@
         }
     }
 }
+
+.getstarted {
+    position: relative;
+    border-top: 1px solid #d8e3fe;
+    @include adaptiveValue('padding-top', 100, 40);
+    @include adaptiveValue('padding-bottom', 100, 40);
+    background: linear-gradient(229.32deg, #6888ff 12.77%, #5e80ff 73.11%);
+    &__container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    &__info {
+        color: #fff;
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+    &__title {
+        font-weight: 300;
+        font-size: rem(48);
+        line-height: math.div(60, 48);
+        color: #fff;
+        span {
+            font-weight: 400;
+        }
+        &:not(:last-child) {
+            margin-bottom: rem(25);
+        }
+    }
+    &__text {
+        max-width: rem(660);
+        color: #fff;
+        &:not(:last-child) {
+            margin-bottom: rem(25);
+        }
+    }
+    &__buttons {
+    }
+    &__decor {
+    }
+}
+.buttons-getstarted {
+    display: flex;
+    @media (max-width: $mobileSmall) {
+        flex-direction: column;
+        width: 100%;
+    }
+    &__01 {
+        background-color: #fff;
+        color: #565f82;
+        box-shadow: 0px 5px 15px #6480e8;
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 0px 10px 20px #385bda;
+            }
+        }
+    }
+    &__02 {
+        min-width: rem(155);
+        color: #c7d3ff;
+        background-color: transparent;
+        border: 1px solid #c7d3ff;
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 0px 10px 20px #385bda;
+            }
+        }
+    }
+}
+.decor-getstarted {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    &__01 {
+    }
+    &__02 {
+    }
+    &__03 {
+    }
+}
+
 //!==================================================//
 
 //!==================================================//
