@@ -11,7 +11,7 @@ function initSliders() {
             speed: 800,
             parallax: true,
             autoplay: {
-                delay: 3000,
+                delay: 7000,
                 disableOnInteraction: false
             },
             pagination: {
