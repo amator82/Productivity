@@ -33,6 +33,7 @@
     }
 }
 .slide-main-block {
+    height: auto;
     &__content {
         position: relative;
         z-index: 2;
@@ -892,6 +893,7 @@
         border-bottom: 1px solid #d8e3fe;
     }
     &__title {
+        text-align: left;
         margin-left: rem(25);
         display: flex;
         justify-content: center;
