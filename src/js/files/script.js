@@ -148,92 +148,81 @@ const data = {
         {
             id: 1,
             text: `
-            <p>
                 Quidam vocibus eum ne, erat consectetuer
                 voluptatibus ut nam. Eu usu vidit tractatos,
                 vero tractatos ius an, in mel diceret persecuti.
-            </p>`,
+            `,
             img: `../../img/testimonials/bill.jpg`
         },
         {
             id: 2,
             text: `
-            <p>
                 Quidam vocibus eum ne, erat consectetuer
                 voluptatibus ut nam. Eu usu vidit tractatos.
-            </p>
-            <p>
                 Quidam vocibus eum ne, erat consectetuer
                 voluptatibus ut nam. Eu usu vidit tractatos.
-            </p>`,
+            `,
             img: `../../img/testimonials/bill.jpg`
         },
         {
             id: 3,
             text: `
-            <p>
                 Quidam vocibus eum ne, erat consectetuer.
-            </p>`,
+            `,
             img: `../../img/testimonials/bill.jpg`
         },
         {
             id: 4,
             text: `
-            <p>
                 Quidam vocibus eum ne, erat consectetuer
                 voluptatibus ut nam. Eu usu vidit tractatos,
                 vero tractatos ius an, in mel diceret persecuti.
-            </p>`,
+            `,
             img: `../../img/testimonials/bill.jpg`
         },
         {
             id: 5,
             text: `
-            <p>
                 Quidam vocibus eum ne, erat consectetuer
                 voluptatibus ut nam. Eu usu vidit tractatos,
                 vero tractatos ius an, in mel diceret persecuti.
-            </p>`,
+            `,
             img: `../../img/testimonials/bill.jpg`
         },
         {
             id: 6,
             text: `
-            <p>
                 Quidam vocibus eum ne, erat consectetuer
                 voluptatibus ut nam. Eu usu vidit tractatos,
                 vero tractatos ius an, in mel diceret persecuti.
-            </p>`,
+            `,
             img: `../../img/testimonials/bill.jpg`
         },
         {
             id: 7,
             text: `
-            <p>
                 Quidam vocibus eum ne, erat consectetuer
                 voluptatibus ut nam. Eu usu vidit tractatos,
                 vero tractatos ius an, in mel diceret persecuti.
-            </p>`,
+            `,
             img: `../../img/testimonials/bill.jpg`
         },
         {
             id: 8,
             text: `
-            <p>
                 Quidam vocibus eum ne, erat consectetuer
                 voluptatibus ut nam. Eu usu vidit tractatos,
                 vero tractatos ius an, in mel diceret persecuti.
-            </p>`,
+            `,
             img: `../../img/testimonials/bill.jpg`
         },
         {
             id: 9,
             text: `
-            <p>
                 Quidam vocibus eum ne, erat consectetuer
                 voluptatibus ut nam. Eu usu vidit tractatos,
                 vero tractatos ius an, in mel diceret persecuti.
-            </p>`,
+            `,
             img: `../../img/testimonials/bill.jpg`
         }
     ],
@@ -316,7 +305,7 @@ const updateCount = (el, interval, initialValue, decor) => {
     }, interval)
 }
 
-//!===============<Main Swiper>============================
+//! <Main Swiper>
 function displayMainBlockSwiper(data) {
     const mainBlockWrapper = document.querySelector('.main-block__wrapper')
     const { mainBlockSwiperData } = data
@@ -538,16 +527,16 @@ function displayMainBlockSwiper(data) {
 }
 
 displayMainBlockSwiper(data)
-//!===============</Main Swiper>============================
+//! </Main Swiper>
 
 //! <Blog Swiper>
-
 function displayBlogSwiper(data) {
     const blogSwiperWrapper = document.querySelector('.blog__wrapper')
     const { blogSwiper } = data
 
     let displayBlogSwiper = blogSwiper.map((item) => {
         const { id, title, text, img } = item
+
         return `
             <div
             class="blog__slide swiper-slide slide-blog"
@@ -625,25 +614,32 @@ displayBlogSwiper(data)
 //! </Blog Swiper>
 
 //! <Testimonials Swiper>
+function displayTestimonialsSwiper(data) {
+    const testimonialsWrapper = document.querySelector('.testimonials__wrapper')
+    const { testimonialsSwiper } = data
 
-// const testimonialsSwiper = document.getElementById('testimonials-swiper')
+    let displayTestimonialsSwiper = testimonialsSwiper.map((item) => {
+        const { id, text, img } = item
 
-// function displayTestimonialsSwiper(testimonialsSwiperItems) {
-//     let displayTestimonialsSwiper = testimonialsSwiperItems.map((item) => {
-//         return `
-//         <div class="swiper-testimonials__card swiper-slide">
-//             <div class="swiper-testimonials__text">
-//                 ${item.text}
-//             </div>
-//             <div class="swiper-testimonials__avatar">
-//                 <img src="${item.img}" alt="Bill" />
-//             </div>
-//         </div>
-//         `
-//     })
-//     displayTestimonialsSwiper = displayTestimonialsSwiper.join('')
-//     testimonialsSwiper.innerHTML = displayTestimonialsSwiper
-// }
+        return `
+        <div class="testimonials__slide swiper-slide slide-testimonials">
+            <div class="slide-testimonials__card">
+                <div class="slide-testimonials__text">
+                    ${text}
+                </div>
+                <div class="slide-testimonials__photo">
+                    <img
+                        src="${img}"
+                        alt="Photo"
+                    />
+                </div>
+            </div>
+        </div>
+        `
+    })
+    displayTestimonialsSwiper = displayTestimonialsSwiper.join('')
+    testimonialsWrapper.innerHTML = displayTestimonialsSwiper
+}
 
-// displayTestimonialsSwiper(testimonialsSwiperData)
+displayTestimonialsSwiper(data)
 //! </Testimonials Swiper>
