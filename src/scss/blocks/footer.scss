@@ -1,37 +1,27 @@
 .footer {
     border-top: 1px solid #d8e3fe;
     background-color: $bgc;
-    padding: 80px 0 40px 0;
-    @media (max-width: $md2) {
-        padding: 30px 0;
-    }
-    @media (max-width: $md3) {
-        padding-top: 50px;
-    }
+    @include adaptiveValue('padding-top', 90, 30);
+    @include adaptiveValue('padding-bottom', 90, 30);
     &__container {
     }
     &__body {
     }
     &__copy {
         text-align: center;
-        padding: 80px 0px 0px 0px;
-        @media (max-width: $md3) {
-            padding: 60px 0px 0px 0px;
-        }
-        @media (max-width: $md4) {
-            padding: 40px 0px 0px 0px;
-        }
+        @include adaptiveValue('padding-top', 80, 40);
     }
 }
 .body-footer {
     display: flex;
-    gap: 50px;
-    @media (max-width: $md2) {
+    row-gap: rem(50);
+    column-gap: rem(80);
+    @media (max-width: $mobile) {
         flex-wrap: wrap;
         justify-content: space-between;
     }
     &__column {
-        @media (max-width: $md2) {
+        @media (max-width: $tablet) {
             &:first-child {
                 flex: 1 1 100%;
             }
@@ -40,14 +30,14 @@
     &__logo {
         display: inline-block;
         &:not(:last-child) {
-            margin: 0px 0px 28px 0px;
+            margin-bottom: rem(20);
         }
     }
     &__contacts {
     }
     &__column-full {
         flex: 1 1 auto;
-        @media (max-width: $md2) {
+        @media (max-width: $tablet) {
             flex: 0 1 50%;
         }
     }
@@ -59,16 +49,18 @@
 .contacts-footer {
     &__item {
         &:not(:last-child) {
-            margin: 0px 0px 20px 0px;
+            margin-bottom: rem(20);
         }
     }
     &__link {
-        color: #697ca6;
         display: inline-block;
-        line-height: 24px;
-        padding-left: 44px;
-        &:hover {
-            text-decoration: underline;
+        color: #697ca6;
+        line-height: math.div(24, 16);
+        padding-left: rem(44);
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     &__link-mail {
@@ -80,37 +72,36 @@
 }
 .menu-footer {
     display: flex;
-    gap: 120px;
+    @include adaptiveValue('gap', 120, 100);
     justify-content: center;
-    @media (max-width: $md2) {
-        gap: 50px;
+    @media (max-width: $tablet) {
         justify-content: space-between;
-    }
-    @media (max-width: 370px) {
-        gap: 90px;
     }
     &__column {
     }
     &__title {
         font-weight: 600;
-        font-size: 18px;
-        line-height: calc(27 / 18 * 100%);
+        font-size: rem(18);
+        line-height: math.div(27, 18);
         color: $darkblue;
         &:not(:last-child) {
-            margin: 0px 0px 20px 0px;
+            margin-bottom: rem(20);
         }
     }
     &__list {
     }
     &__item {
         &:not(:last-child) {
-            margin: 0px 0px 15px 0px;
+            margin-bottom: rem(15);
         }
     }
     &__link {
         color: #697ca6;
-        &:hover {
-            text-decoration: underline;
+        white-space: nowrap;
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -120,17 +111,17 @@
     text-align: center;
     &__title {
         font-weight: 600;
-        font-size: 18px;
-        line-height: calc(27 / 18 * 100%);
+        font-size: rem(18);
+        line-height: math.div(27, 18);
         color: $darkblue;
         &:not(:last-child) {
-            margin: 0px 0px 15px 0px;
+            margin-bottom: rem(15);
         }
     }
     &__items {
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: rem(30);
     }
     &__item {
     }
