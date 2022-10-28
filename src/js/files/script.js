@@ -2,38 +2,46 @@ import { isMobile } from './functions.js'
 import { mtrModules } from './modules.js'
 import data from './data.js'
 
+const blockUsers = document.querySelector('.item-customers__content')
 
-const percents = document.querySelector('.item-customers__percents')
-const number = document.querySelector('.item-users__number')
+function runningNumbers(element) {
+    const percents = document.querySelector('.item-customers__percents')
+    const number = document.querySelector('.item-users__number')
+    
+    let isResizeble = false
+    let blockCoordinates = element.getBoundingClientRect(),
+        blockCoordinateTop = document.body.scrollTop + blockCoordinates.top
 
-let isResizeble = false
-window.addEventListener('scroll', () => {
-    const scrollHeight = Math.floor(window.pageYOffset)
+    let scrollHeight = setInterval(() => {
+        scrollHeight = Math.floor(window.pageYOffset)
 
-    if (!isResizeble && scrollHeight > 1350) {
-        updateCount(percents, 10, 0, '%')
-        updateCount(number, 1, 2000, '+')
+        if (!isResizeble && scrollHeight > blockCoordinateTop) {
+            updateCount(percents, 10, 0, '%')
+            updateCount(number, 1, 2000, '+')
 
-        isResizeble = true
-    }
-})
-
-const updateCount = (el, interval, initialValue, decor) => {
-    const value = parseInt(el.dataset.value)
-    const increment = Math.ceil(value / 1000)
-
-    const increaseValue = setInterval(() => {
-        initialValue += increment
-
-        if (initialValue > value) {
-            el.textContent = `${value + decor}`
-            clearInterval(increaseValue)
-            return
+            isResizeble = true
         }
+    }, 1)
 
-        el.textContent = `${initialValue + decor}`
-    }, interval)
+    function updateCount(el, interval, initialValue, decor) {
+        const value = parseInt(el.dataset.value)
+        const increment = Math.ceil(value / 1000)
+
+        const increaseValue = setInterval(() => {
+            initialValue += increment
+
+            if (initialValue > value) {
+                el.textContent = `${value + decor}`
+                clearInterval(increaseValue)
+                return
+            }
+
+            el.textContent = `${initialValue + decor}`
+        }, interval)
+    }
 }
+
+runningNumbers(blockUsers)
 
 //! <Main Swiper>
 function displayMainBlockSwiper(data) {
