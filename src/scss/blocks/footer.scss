@@ -15,13 +15,14 @@
 .body-footer {
     display: flex;
     row-gap: rem(50);
-    column-gap: rem(80);
+    column-gap: rem(50);
     @media (max-width: $mobile) {
+        column-gap: rem(80);
         flex-wrap: wrap;
         justify-content: space-between;
     }
     &__column {
-        @media (max-width: $tablet) {
+        @media (max-width: $mobile) {
             &:first-child {
                 flex: 1 1 100%;
             }
@@ -74,7 +75,7 @@
     display: flex;
     @include adaptiveValue('gap', 120, 100);
     justify-content: center;
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
         justify-content: space-between;
     }
     &__column {
@@ -124,8 +125,17 @@
         gap: rem(30);
     }
     &__item {
+        @media (any-hover: hover) {
+            transition: all 0.3s ease 0s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
     }
 }
+//!==================================================//
+
+//!==================================================//
 .top-link {
     font-size: 1.25rem;
     position: fixed;
@@ -158,3 +168,4 @@
         transform: scale(1);
     }
 }
+//!==================================================//
