@@ -2,12 +2,13 @@ import { isMobile } from './functions.js'
 import { mtrModules } from './modules.js'
 import data from './data.js'
 
+//! <Running Numbers>
 const blockUsers = document.querySelector('.item-customers__content')
 
 function runningNumbers(element) {
     const percents = document.querySelector('.item-customers__percents')
     const number = document.querySelector('.item-users__number')
-    
+
     let isResizeble = false
     let blockCoordinates = element.getBoundingClientRect(),
         blockCoordinateTop = document.body.scrollTop + blockCoordinates.top
@@ -42,6 +43,7 @@ function runningNumbers(element) {
 }
 
 runningNumbers(blockUsers)
+//! </Running Numbers>
 
 //! <Main Swiper>
 function displayMainBlockSwiper(data) {
