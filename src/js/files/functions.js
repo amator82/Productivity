@@ -115,9 +115,11 @@ export let bodyLock = (delay = 500) => {
 //! <Добавление loaded для HTML после полной загрузки страницы>
 export function addLoadedClass() {
     window.addEventListener('load', function () {
+        document.documentElement.classList.add('loaded__hiding')
         setTimeout(function () {
             document.documentElement.classList.add('loaded')
-        }, 0)
+            document.documentElement.classList.remove('loaded__hiding')
+        }, 500)
     })
 }
 export function setHash(hash) {

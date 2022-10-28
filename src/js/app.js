@@ -1,6 +1,7 @@
 import * as mtrFunctions from './files/functions.js'
 
-mtrFunctions.isWebp()
+mtrFunctions.isWebp()          
+mtrFunctions.addLoadedClass()          
 mtrFunctions.menuInit()
 mtrFunctions.spollers()
 
