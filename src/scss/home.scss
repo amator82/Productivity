@@ -469,14 +469,42 @@
         position: absolute;
         &_1 {
             top: percent(141, 885);
-            left: percent(225, 1230);
+            left: percent(259, 1230);
         }
         &_2 {
-            top: percent(634, 885);
-            left: percent(126, 1230);
+            top: percent(143, 885);
+            left: percent(225, 1230);
         }
         &_3 {
+            bottom: percent(232, 885);
+            left: percent(162, 1230);
+        }
+        &_4 {
+            bottom: percent(213, 885);
+            left: percent(126, 1230);
+        }
+        &_5 {
+            bottom: percent(201, 885);
+            left: percent(155, 1230);
+        }
+        &_6 {
+            bottom: percent(213, 885);
+            left: percent(209, 1230);
+        }
+        &_7 {
             top: percent(203, 885);
+            right: percent(114, 1230);
+        }
+        &_8 {
+            top: percent(223, 885);
+            right: percent(194, 1230);
+        }
+        &_9 {
+            top: percent(219, 885);
+            right: percent(140, 1230);
+        }
+        &_10 {
+            top: percent(240, 885);
             right: percent(114, 1230);
         }
     }
