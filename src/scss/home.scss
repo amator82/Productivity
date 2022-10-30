@@ -782,9 +782,9 @@
         }
     }
     &__slider {
+        max-width: rem(420);
     }
     &__wrapper {
-        max-width: rem(700);
         @include adaptiveValue('margin-bottom', 90, 60);
     }
     &__slide {

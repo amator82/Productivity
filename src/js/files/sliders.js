@@ -55,6 +55,7 @@ function initSliders() {
             loop: true,
             watchOverflow: true,
             speed: 800,
+            slidesPerView: 1,
             parallax: true,
             autoplay: {
                 delay: 6000,
@@ -69,14 +70,12 @@ function initSliders() {
                     spaceBetween: 20
                 },
                 480: {
-                    slidesPerView: 1,
                     spaceBetween: 30
                 },
                 767: {
                     spaceBetween: 40
                 },
                 1440: {
-                    slidesPerView: 1.5,
                     spaceBetween: 65
                 }
             },
