@@ -22,7 +22,7 @@ body {
     font-size: $fontSize;
     font-family: $fontFamily;
     font-weight: 400;
-    ._lock & {
+    .lock & {
         overflow: hidden;
         touch-action: none;
         overscroll-behavior: none;
