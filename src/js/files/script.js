@@ -45,6 +45,35 @@ function runningNumbers(element) {
 runningNumbers(blockUsers)
 //! </Running Numbers>
 
+//! <Dispaly Decor>
+// function displayBlockDecor(data) {
+//     const { mainBlockSwiperData } = data
+
+//     const decors = mainBlockSwiperData.filter(function findDecor() {
+//         console.log(decor)
+//         return decor
+//     })
+
+//     return `
+//             <div data-prlx-mouse
+//                 data-prlx-cx="90"
+//                 data-prlx-cy="90"
+//                 data-prlx-dxr
+//                 data-prlx-dyr
+//                 class="decor-main-block__item decor-main-block__item_1">
+//                     <img src="${decor[1]}" alt="01"/>
+//             </div>
+//         `
+
+//     console.log(mainBlockSwiperData.decor);
+//     if (mainBlockSwiperData.decor) {
+//         const { decor } = item
+//     }
+// }
+
+// displayBlockDecor(data)
+//! </Dispaly Decor>
+
 //! <Main Swiper>
 function displayMainBlockSwiper(data) {
     const mainBlockWrapper = document.querySelector('.main-block__wrapper')
@@ -266,7 +295,7 @@ function displayMainBlockSwiper(data) {
     mainBlockWrapper.innerHTML = displayMainBlockSwiper
 }
 
-displayMainBlockSwiper(data)
+// displayMainBlockSwiper(data)
 //! </Main Swiper>
 
 //! <Blog Swiper>
